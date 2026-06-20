@@ -1,4 +1,4 @@
-function DCM = prpsToDCM(varargin)
+function DCM = prpsToDCM(prps)
 %PRPSTODCM Convert Principal Rotation Parameter Set to a DCM.
 %
 %   Computes the Direction Cosine Matrix corresponding to a
@@ -11,8 +11,6 @@ function DCM = prpsToDCM(varargin)
 %   ------
 %   prps First column corresponds to angle, the remaining columns
 %        to axis components in each row [1x4] [rad].
-%   prps First argument corresponds to angle, the remaining
-%        arguments to axis components [rad].
 %
 %   Outputs
 %   -------
@@ -21,8 +19,6 @@ function DCM = prpsToDCM(varargin)
 %   Examples
 %   --------
 %   DCM = prpsToDCM([pi/6 1 0 0]);
-%
-%   DCM = prpsToDCM(pi/6,1,0,0);
 %
 %   References
 %   ----------
@@ -33,16 +29,8 @@ function DCM = prpsToDCM(varargin)
 %   Author: Tomás M. Suárez
 %   Date: 2026-06-19
     
-    if nargin == 1
-        prps = varargin{1};
-        assert(numel(prps)==4, 'The input array must have 4 elements.');
-    elseif nargin == 4
-        prps(1) = varargin{1};
-        prps(2) = varargin{2};
-        prps(3) = varargin{3};
-        prps(4) = varargin{4};
-    else
-        error('Use: prpsToDCM([phi e1 e2 e3]) or prpsToDCM(phi,e1,e2,e3)');
+    arguments
+        prps (1,4) double
     end
 
     % Axis of rotation normalization

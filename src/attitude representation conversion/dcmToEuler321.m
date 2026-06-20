@@ -19,6 +19,10 @@ function [psi, theta, phi] = dcmToEuler321(DCM)
 %   --------
 %   DCM = dcmToEuler321([0 1 0;-1 0 0;1 0 0]);
 %
+%   Assumption
+%   ----------
+%   DCM must be an orthonormal matrix, with det(DCM) == 1.
+%
 %   References
 %   ----------
 %   [1] Schaub, H. and Junkins, J. L.
@@ -28,6 +32,10 @@ function [psi, theta, phi] = dcmToEuler321(DCM)
 %   Author: Tomás M. Suárez
 %   Date: 2026-06-19
 
+    arguments
+        DCM (3,3) double
+    end
+    
     psi   = atan2(DCM(1,2), DCM(1,1)); 
     theta = asin(-DCM(1,3));           
     phi   = atan2(DCM(2,3), DCM(3,3));

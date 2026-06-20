@@ -21,6 +21,10 @@ function [W, i, w] = dcmToEuler313(DCM)
 %   --------
 %   DCM = dcmToEuler313([0 1 0;-1 0 0;1 0 0]);
 %
+%   Assumption
+%   ----------
+%   DCM must be an orthonormal matrix, with det(DCM) == 1.
+%
 %   References
 %   ----------
 %   [1] Schaub, H. and Junkins, J. L.
@@ -30,6 +34,10 @@ function [W, i, w] = dcmToEuler313(DCM)
 %   Author: Tomás M. Suárez
 %   Date: 2026-06-19
 
+    arguments
+        DCM (3,3) double
+    end
+    
     W  = atan2(DCM(3,1), -DCM(3,2));
     i  = acos(DCM(3,3));            
     w  = atan2(DCM(1,3), DCM(2,3));  
