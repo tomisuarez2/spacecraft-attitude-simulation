@@ -1,0 +1,55 @@
+function sigmaFinal = mrpComposition(sigma1, sigma2)
+%MRPCOMPOSITION Composition of two MRP sets.
+%
+%   Numerically efficient method to compute the composition of 
+%   two MRP (Modified Rodrigues Parameters) sets (s1 -> s2 -> sFinal).
+% 
+%   Inputs
+%   ------
+%   sigma1     First Modified Rodrigues Parameter representation [1x3]
+%   sigma2     Second Modified Rodrigues Parameter representation [1x3]
+%
+%   Outputs
+%   -------
+%   sigmaFinal Composition of Modified Rodrigues Parameter representation arguments [1x3]
+%
+%   Examples
+%   --------
+%   sigmaFinal = mrpComposition([0 1 0],[1 0 0]);
+%
+%   References
+%   ----------
+%   [1] Schaub, H. and Junkins, J. L.
+%       Analytical Mechanics of Space Systems,
+%       2nd Edition, AIAA, 2009.
+%
+%   Author: Tomás M. Suárez
+%   Date: 2026-06-22
+
+    arguments
+        sigma1 (1,3) double
+        sigma2 (1,3) double
+    end
+
+    tol = 1e-10;
+
+    norm2Sigma1 = sigma1'*sigma1;
+    norm2Sigma2 = sigma2'*sigma2;
+
+    denominator = 1 + norm2Sigma1*norm2Sigma2 - 2*sigma1'*sigma2;
+
+    if abs(denominator) < tol 
+        if norm2Sigma2 > norm2Sigma1
+            sigma2      = -sigma2/norm2Sigma2;
+            norm2Sigma2 = sigma2'*sigma2;            
+        else
+            sigma1      = -sigma1/norm2Sigma1;
+            norm2Sigma1 = sigma1'*sigma1;
+        end
+        denominator = 1 + norm2Sigma1*norm2Sigma2 - 2*sigma1'*sigma2;
+    end
+
+    sigmaFinal = (1 - norm2Sigma1)*sigma2 + (1 - norm2Sigma2)*sigma1 - 2*(skew(sigma2)*sigma1);
+    sigmaFinal = sigmaFinal/denominator;
+
+end

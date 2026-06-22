@@ -1,5 +1,5 @@
 function DCM = quatToDCM(beta)
-%QUATTODCM Convert Unit Quaternion attiude representation to a DCM.
+%QUATTODCM Convert Unit Quaternion attitude representation to a DCM.
 %
 %   Computes the Direction Cosine Matrix corresponding to a
 %   unit quaternion representation (b0 b1 b2 b3) that transforms 
@@ -18,8 +18,6 @@ function DCM = quatToDCM(beta)
 %   Examples
 %   --------
 %   DCM = quatToDCM([1 0 0 0]);
-%
-%   DCM = quatToDCM(1, 0, 0, 0);
 %
 %   References
 %   ----------
