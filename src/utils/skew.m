@@ -5,7 +5,7 @@ function S = skew(v)
 %   that allow us to compute:
 %   
 %   vF = cross(v,v2)
-%   vF = -skew(v)*v2;
+%   vF = skew(v)*v2;
 % 
 %   Inputs
 %   ------

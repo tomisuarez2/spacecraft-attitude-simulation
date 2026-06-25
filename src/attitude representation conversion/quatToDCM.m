@@ -9,7 +9,7 @@ function DCM = quatToDCM(beta)
 % 
 %   Inputs
 %   ------
-%   beta Unit Quaternion representation, scalar first convention [1x4]
+%   beta Unit Quaternion representation, scalar first convention [4x1]
 %
 %   Outputs
 %   -------
@@ -17,7 +17,7 @@ function DCM = quatToDCM(beta)
 %
 %   Examples
 %   --------
-%   DCM = quatToDCM([1 0 0 0]);
+%   DCM = quatToDCM([1 0 0 0]');
 %
 %   References
 %   ----------
@@ -29,7 +29,7 @@ function DCM = quatToDCM(beta)
 %   Date: 2026-06-20
 
     arguments
-        beta (1,4) double
+        beta (4,1) double
     end
 
     % Normalization

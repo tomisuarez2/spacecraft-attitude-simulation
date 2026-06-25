@@ -9,15 +9,15 @@ function beta = dcmToQuat(DCM, solutions)
 % 
 %   Inputs
 %   ------
-%   DCM           Direction Cosine Matrix [3x3]
-%   solutions     Optional, default 'short' to return short rotation,
-%                 'long' to return long rotation,
-%                 'all' to return both possible sign variations.
+%   DCM            Direction Cosine Matrix [3x3]
+%   solutions      Optional, default 'short' to return short rotation,
+%                  'long' to return long rotation,
+%                  'all' to return both possible sign variations.
 %
 %   Outputs
 %   -------
-%   [b0 b1 b2 b3] Unit Quaternion representation, scalar first convention, short rotation [1x4]
-%                 or both possible solutions, short and large rotation [2x4]
+%   [b0 b1 b2 b3]' Unit Quaternion representation, scalar first convention, short rotation [4x1]
+%                  or both possible solutions, short and large rotation [4x2]
 %
 %   Examples
 %   --------
@@ -48,7 +48,7 @@ function beta = dcmToQuat(DCM, solutions)
     greater = [tr DCM(1,1) DCM(2,2) DCM(3,3)];
 
     % Find index of greatest element
-    beta     = zeros(1,4);
+    beta     = zeros(4,1);
     greatest = greater(1);
     idx      = 1;
     for i=2:4
@@ -88,7 +88,7 @@ function beta = dcmToQuat(DCM, solutions)
         case 'long'
             beta = -beta;
         case 'all'
-            beta = [ beta; -beta];
+            beta = [beta -beta];
         otherwise
             error('Use: dcmToQuat([DCM,"short"/"long"/"all")');
     end

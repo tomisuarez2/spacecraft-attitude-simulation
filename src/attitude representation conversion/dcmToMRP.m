@@ -9,11 +9,11 @@ function sigma = dcmToMRP(DCM)
 % 
 %   Inputs
 %   ------
-%   DCM        Direction Cosine Matrix [3x3]
+%   DCM         Direction Cosine Matrix [3x3]
 %
 %   Outputs
 %   -------
-%   [s1 s2 s3] Modified Rodrigues Parameter representation [1x3]
+%   [s1 s2 s3]' Modified Rodrigues Parameter representation [3x1]
 %
 %   Examples
 %   --------
@@ -42,7 +42,7 @@ function sigma = dcmToMRP(DCM)
         sigma = beta(2:4)/(1 + beta(1));
     else
         sigma = [DCM(2,3)-DCM(3,2), DCM(3,1)-DCM(1,3), DCM(1,2)-DCM(2,1)];
-        sigma = sigma/(zitta*(zitta + 2));
+        sigma = sigma'/(zitta*(zitta + 2));
     end
  
 end

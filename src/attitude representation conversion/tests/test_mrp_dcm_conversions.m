@@ -23,7 +23,7 @@ tol = 1e-12;
 
 fprintf('Test 1: Identity attitude...\n');
 
-DCM = mrpToDCM([0 0 0]);
+DCM = mrpToDCM([0 0 0]');
 
 assert(norm(DCM - eye(3),'fro') < tol);
 
@@ -40,9 +40,9 @@ mrps = [1 0 0;
         0 1 0;
         0 0 1];
 
-for k = 1:size(mrps,1)
+for k = 1:size(mrps,2)
 
-    DCM = mrpToDCM(mrps(k,:));
+    DCM = mrpToDCM(mrps(:,k));
 
     assert(abs(det(DCM)-1) < tol);
     assert(norm(DCM*DCM' - eye(3),'fro') < 1e-10);
@@ -66,7 +66,7 @@ for k = 1:N
     s2 = -1 + 2*rand;
     s3 = -1 + 2*rand;
 
-    sigma = [s1 s2 s3];
+    sigma = [s1 s2 s3]';
     no = norm(sigma);
 
     if no > 1
@@ -104,7 +104,7 @@ for k = 1:N
     s2 = -1 + 2*rand;
     s3 = -1 + 2*rand;
 
-    sigma = [s1 s2 s3];
+    sigma = [s1 s2 s3]';
     no = norm(sigma);
 
     if no > 1
@@ -147,7 +147,7 @@ for k = 1:N
     s2 = -1 + 2*rand;
     s3 = -1 + 2*rand;
 
-    sigma = [s1 s2 s3];
+    sigma = [s1 s2 s3]';
     no = norm(sigma);
 
     if no > 1
@@ -188,7 +188,7 @@ for k = 1:N
     s2 = -1 + 2*rand;
     s3 = -1 + 2*rand;
 
-    sigma = [s1 s2 s3];
+    sigma = [s1 s2 s3]';
     no = norm(sigma);
 
     if no > 1

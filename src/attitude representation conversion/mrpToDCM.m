@@ -9,7 +9,7 @@ function DCM = mrpToDCM(sigma)
 % 
 %   Inputs
 %   ------
-%   sigma Modified Rodrigues Parameter representation [1x3]
+%   sigma Modified Rodrigues Parameter representation [3x1]
 %
 %   Outputs
 %   -------
@@ -29,7 +29,7 @@ function DCM = mrpToDCM(sigma)
 %   Date: 2026-06-22
 
     arguments
-        sigma (1,3) double
+        sigma (3,1) double
     end
 
     s1 = sigma(1); s2 = sigma(2); s3 = sigma(3);

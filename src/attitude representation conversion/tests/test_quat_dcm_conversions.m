@@ -23,7 +23,7 @@ tol = 1e-12;
 
 fprintf('Test 1: Identity attitude...\n');
 
-DCM = quatToDCM([1,0,0,0]);
+DCM = quatToDCM([1,0,0,0]');
 
 assert(norm(DCM - eye(3),'fro') < tol);
 
@@ -42,7 +42,7 @@ quats = [0 1 0 0;
 
 for k = 1:size(quats,1)
 
-    DCM = quatToDCM(quats(k,:));
+    DCM = quatToDCM(quats(k,:)');
 
     assert(abs(det(DCM)-1) < tol);
     assert(norm(DCM*DCM' - eye(3),'fro') < 1e-10);
@@ -67,7 +67,7 @@ for k = 1:N
     b2 = 0.01 + rand;
     b3 = 0.01 + rand;
 
-    DCM = quatToDCM([b0,b1,b2,b3]);
+    DCM = quatToDCM([b0,b1,b2,b3]');
 
     orthoError = norm(DCM*DCM' - eye(3),'fro');
 
@@ -100,7 +100,7 @@ for k = 1:N
     b2 = 0.01 + rand;
     b3 = 0.01 + rand;
 
-    beta = [b0 b1 b2 b3];
+    beta = [b0 b1 b2 b3]';
     beta = beta/norm(beta);
 
     DCM = quatToDCM(beta);
@@ -143,7 +143,7 @@ for k = 1:N
     b2 = 0.01 + rand;
     b3 = 0.01 + rand;
 
-    beta = [b0 b1 b2 b3];
+    beta = [b0 b1 b2 b3]';
     beta = beta/norm(beta);
 
     DCM1 = quatToDCM(beta);
@@ -181,7 +181,7 @@ for k = 1:N
     b2 = 0.01 + rand;
     b3 = 0.01 + rand;
 
-    beta = [b0 b1 b2 b3];
+    beta = [b0 b1 b2 b3]';
     beta = beta/norm(beta);
 
     DCM1 = quatToDCM(beta);
