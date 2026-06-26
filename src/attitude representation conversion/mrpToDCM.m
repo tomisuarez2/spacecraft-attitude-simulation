@@ -17,7 +17,7 @@ function DCM = mrpToDCM(sigma)
 %
 %   Examples
 %   --------
-%   DCM = mrpToDCM([0 0 0]);
+%   DCM = mrpToDCM([0 0 0]');
 %
 %   References
 %   ----------

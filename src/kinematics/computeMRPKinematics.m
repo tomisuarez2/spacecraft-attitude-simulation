@@ -37,20 +37,20 @@ function sigmaDot = computeMRPKinematics(sigma, w)
         w (3,1) double {mustBeFinite}
     end
 
-    sigma1 = sigma(1); sigma1Sq = sigma1*sigma1;
-    sigma2 = sigma(2); sigma2Sq = sigma2*sigma2;
-    sigma3 = sigma(3); sigma3Sq = sigma3*sigma3;
-    oneMinusSigma2 = 1 - sigma1Sq - sigma2Sq - sigma3Sq;
+    s1 = sigma(1); s1Sq = s1*s1;
+    s2 = sigma(2); s2Sq = s2*s2;
+    s3 = sigma(3); s3Sq = s3*s3;
+    oneMinusSigma2 = 1 - s1Sq - s2Sq - s3Sq;
     
-    s1s2 = sigma1*sigma2;
-    s2s3 = sigma2*sigma3;
-    s1s3 = sigma1*sigma3;
+    s1s2 = s1*s2;
+    s2s3 = s2*s3;
+    s1s3 = s1*s3;
     
     % Expanded form of B(sigma)*w to avoid constructing the full matrix.
     sigmaDot = [
-    (oneMinusSigma2 + 2*sigma1Sq)*w(1) + 2*(s1s2 - sigma3)*w(2) + 2*(s1s3 + sigma2)*w(3);
-    2*(s1s2 + sigma3)*w(1) + (oneMinusSigma2 + 2*sigma2Sq)*w(2) + 2*(s2s3 - sigma1)*w(3);
-    2*(s1s3 - sigma2)*w(1) + 2*(s2s3 + sigma1)*w(2) + (oneMinusSigma2 + 2*sigma3Sq)*w(3);
+    (oneMinusSigma2 + 2*s1Sq)*w(1) + 2*(s1s2 - s3)*w(2) + 2*(s1s3 + s2)*w(3);
+    2*(s1s2 + s3)*w(1) + (oneMinusSigma2 + 2*s2Sq)*w(2) + 2*(s2s3 - s1)*w(3);
+    2*(s1s3 - s2)*w(1) + 2*(s2s3 + s1)*w(2) + (oneMinusSigma2 + 2*s3Sq)*w(3);
     ];
     sigmaDot = sigmaDot/4;
 

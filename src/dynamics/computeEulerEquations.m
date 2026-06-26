@@ -33,9 +33,8 @@ function dwdt = computeEulerEquations(I, w, torque)
         torque (3,1) double {mustBeFinite}
     end
 
-    dwdt    = zeros(3,1);
-    dwdt(1) = (-(I(3,3) - I(2,2))*w(2)*w(3) + torque(1))/I(1,1);
-    dwdt(2) = (-(I(1,1) - I(3,3))*w(3)*w(1) + torque(2))/I(2,2);
-    dwdt(3) = (-(I(2,2) - I(1,1))*w(1)*w(2) + torque(3))/I(3,3);
+    dwdt(1,1) = (-(I(3,3) - I(2,2))*w(2)*w(3) + torque(1))/I(1,1);
+    dwdt(2,1) = (-(I(1,1) - I(3,3))*w(3)*w(1) + torque(2))/I(2,2);
+    dwdt(3,1) = (-(I(2,2) - I(1,1))*w(1)*w(2) + torque(3))/I(3,3);
 
 end
