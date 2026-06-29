@@ -7,7 +7,7 @@ close;
 clear;
 clc;
 
-p = genpath("src");
+p = genpath("..\src");
 addpath(p)
 
 %% Kinematics numerical integration
