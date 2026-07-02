@@ -22,6 +22,10 @@ function S = skew(v)
 %   Author: Tomás M. Suárez
 %   Date: 2026-06-22
 
+    arguments
+        v (3,1) {mustBeA(v,["double","sym"])}
+    end
+
     S = [  0  -v(3) v(2);
           v(3)  0  -v(1);
          -v(2) v(1)  0];

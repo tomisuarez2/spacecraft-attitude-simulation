@@ -3,15 +3,16 @@ function sigmaFinal = mrpComposition(sigma1, sigma2)
 %
 %   Numerically efficient method to compute the composition of 
 %   two MRP (Modified Rodrigues Parameters) sets (s1 -> s2 -> sFinal).
+%   Implements the composition given in Eq. (3.152) of [1].
 % 
 %   Inputs
 %   ------
-%   sigma1     First Modified Rodrigues Parameter representation [1x3]
-%   sigma2     Second Modified Rodrigues Parameter representation [1x3]
+%   sigma1     First Modified Rodrigues Parameter representation [3x1]
+%   sigma2     Second Modified Rodrigues Parameter representation [3x1]
 %
 %   Outputs
 %   -------
-%   sigmaFinal Composition of Modified Rodrigues Parameter representation arguments [1x3]
+%   sigmaFinal Composition of Modified Rodrigues Parameter representation arguments [3x1]
 %
 %   Examples
 %   --------
@@ -27,8 +28,8 @@ function sigmaFinal = mrpComposition(sigma1, sigma2)
 %   Date: 2026-06-22
 
     arguments
-        sigma1 (1,3) double
-        sigma2 (1,3) double
+        sigma1 (3,1) double
+        sigma2 (3,1) double
     end
 
     tol = 1e-10;

@@ -57,10 +57,10 @@ function [tOut, yOut] = rkf45Integrator(func, tSpan, y0, normFunc, tolerance)
 %   Date: 2026-06-25
 
     arguments
-        func (1,1) function_handle
-        tSpan (1,2) double {mustBeFinite}
-        y0 (:,1) double {mustBeFinite}
-        normFunc (1,1) function_handle = @(y) y;
+        func      (1,1) function_handle
+        tSpan     (1,2) double {mustBeFinite}
+        y0        (:,1) double {mustBeFinite}
+        normFunc  (1,1) function_handle = @(y) y;
         tolerance (1,1) double {mustBeFinite,mustBePositive} = 1e-8
     end
     
