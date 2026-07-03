@@ -4,6 +4,7 @@ function DCM = euler321ToDCM(varargin)
 %   Computes the Direction Cosine Matrix corresponding to a
 %   3-2-1 Euler angle sequence (yaw-pitch-roll) that transforms 
 %   vector coordinates from the inertial frame N to the body frame B.
+%   Implements method given in Eq. (3.34) of [1].
 %
 %   v_B = DCM * v_N 
 % 

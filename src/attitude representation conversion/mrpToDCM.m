@@ -4,6 +4,7 @@ function DCM = mrpToDCM(sigma)
 %   Computes the Direction Cosine Matrix corresponding to a
 %   modified rodrigues parameter representation (s1 s2 s3) that transforms 
 %   vector coordinates from the inertial frame N to the body frame B.
+%   Implements method given in Eq. (3.146) of [1].
 %
 %   v_B = DCM * v_N 
 % 

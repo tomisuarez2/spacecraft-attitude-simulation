@@ -4,6 +4,7 @@ function [W, i, w] = dcmToEuler313(DCM)
 %   Computes 3-1-3 Euler angle sequence (W-i-w) corresponding 
 %   to a Direction Cosine Matrix that transforms vector coordinates from 
 %   the inertial frame N to the body frame B.
+%   Implements method given in Eq. (3.37) of [1].
 %
 %   v_B = DCM * v_N 
 % 
@@ -19,11 +20,7 @@ function [W, i, w] = dcmToEuler313(DCM)
 %
 %   Examples
 %   --------
-%   DCM = dcmToEuler313([0 1 0;-1 0 0;1 0 0]);
-%
-%   Assumption
-%   ----------
-%   DCM must be an orthonormal matrix, with det(DCM) == 1.
+%   [W,i,w] = dcmToEuler313([0 1 0;-1 0 0;1 0 0]);
 %
 %   References
 %   ----------
@@ -35,7 +32,7 @@ function [W, i, w] = dcmToEuler313(DCM)
 %   Date: 2026-06-19
 
     arguments
-        DCM (3,3) double
+        DCM double {mustBeDCM}
     end
     
     W  = atan2(DCM(3,1), -DCM(3,2));

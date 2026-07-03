@@ -4,6 +4,7 @@ function DCM = prpsToDCM(prps)
 %   Computes the Direction Cosine Matrix corresponding to a
 %   Principal Rotation Parameter Set (phi,e1,e2,e3) that transforms 
 %   vector coordinates from the inertial frame N to the body frame B.
+%   Implements method given in Eq. (3.72) of [1].
 %
 %   v_B = DCM * v_N 
 % 

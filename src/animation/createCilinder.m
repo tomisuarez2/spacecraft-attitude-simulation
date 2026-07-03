@@ -12,13 +12,13 @@ function [v, f] = createCilinder(radius,height,n)
 %   Outputs
 %   -------
 %   v      Vertices of the cilinder mesh
-%   f      Faces of the cube mesh
+%   f      Faces of the cilinder mesh
 %
 
     arguments
         radius (1,1) double {mustBeFinite}
         height (1,1) double {mustBeFinite}
-        n (1,1) double {mustBeFinite} = 30;
+        n      (1,1) double {mustBeFinite} = 30;
     end
     
     theta = linspace(0, 2*pi, n+1);

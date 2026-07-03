@@ -12,7 +12,7 @@
 clear
 clc
 
-addpath('..\')
+addpath(genpath('..\..\src\'))
 
 fprintf('\n');
 fprintf('=============================================\n');
@@ -270,5 +270,3 @@ fprintf('=============================================\n');
 fprintf(' ALL TESTS PASSED\n');
 fprintf('=============================================\n');
 fprintf('\n');
-
-rmpath('..\')

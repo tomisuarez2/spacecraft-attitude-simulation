@@ -4,6 +4,7 @@ function DCM = quatToDCM(beta)
 %   Computes the Direction Cosine Matrix corresponding to a
 %   unit quaternion representation (b0 b1 b2 b3) that transforms 
 %   vector coordinates from the inertial frame N to the body frame B.
+%   Implements method given in Eq. (3.93) of [1].
 %
 %   v_B = DCM * v_N 
 % 

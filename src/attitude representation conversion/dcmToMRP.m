@@ -4,6 +4,7 @@ function sigma = dcmToMRP(DCM)
 %   Computes modified rodrigues parameter (s1 s2 s3) corresponding 
 %   to a Direction Cosine Matrix that transforms vector coordinates from 
 %   the inertial frame N to the body frame B.
+%   Implements method given in Eq. (3.149) of [1].
 %
 %   v_B = DCM * v_N 
 % 
@@ -17,11 +18,7 @@ function sigma = dcmToMRP(DCM)
 %
 %   Examples
 %   --------
-%   DCM = dcmToMRP([0 1 0;-1 0 0;1 0 0]);
-%
-%   Assumption
-%   ----------
-%   DCM must be an orthonormal matrix, with det(DCM) == 1.
+%   sigma = dcmToMRP([0 1 0;-1 0 0;1 0 0]);
 %
 %   References
 %   ----------
@@ -33,7 +30,7 @@ function sigma = dcmToMRP(DCM)
 %   Date: 2026-06-22
 
     arguments
-        DCM (3,3) double
+        DCM double {mustBeDCM}
     end
 
     zitta = sqrt(trace(DCM)+1);

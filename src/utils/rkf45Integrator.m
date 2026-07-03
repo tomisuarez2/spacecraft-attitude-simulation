@@ -1,4 +1,4 @@
-function [tOut, yOut] = rkf45Integrator(func, tSpan, y0, normFunc, tolerance)
+function [tOut, yOut] = rkf45Integrator(func, tSpan, y0, stateFunc, tolerance)
 %RKF45INTEGRATOR Adaptive Runge-Kutta-Fehlberg 4(5) ODE integrator.
 %
 %   Integrates a system of first-order ordinary differential equations
@@ -32,7 +32,7 @@ function [tOut, yOut] = rkf45Integrator(func, tSpan, y0, normFunc, tolerance)
 %
 %               Default: 1e-8
 %
-%   normFunc    Function handle that normalizes the state after each
+%   stateFunc   Function handle for functionality as a state function after each
 %               intgration step
 %
 %   Outputs
@@ -60,7 +60,7 @@ function [tOut, yOut] = rkf45Integrator(func, tSpan, y0, normFunc, tolerance)
         func      (1,1) function_handle
         tSpan     (1,2) double {mustBeFinite}
         y0        (:,1) double {mustBeFinite}
-        normFunc  (1,1) function_handle = @(y) y;
+        stateFunc  (1,1) function_handle = @(y) y;
         tolerance (1,1) double {mustBeFinite,mustBePositive} = 1e-8
     end
     
@@ -124,8 +124,8 @@ function [tOut, yOut] = rkf45Integrator(func, tSpan, y0, normFunc, tolerance)
             h = min(h, tf-t);
             t = t + h;
             y = yi + h*f*c5';
-            % Normalization
-            y = normFunc(y);
+            % State functionality
+            y = stateFunc(y);
             k = k + 1;
             tOut(k) = t;
             yOut(:,k) = y;

@@ -4,6 +4,7 @@ function [psi, theta, phi] = dcmToEuler321(DCM)
 %   Computes 3-2-1 Euler angle sequence (yaw-pitch-roll) corresponding 
 %   to a Direction Cosine Matrix that transforms vector coordinates from 
 %   the inertial frame N to the body frame B.
+%   Implements method given in Eq. (3.35) of [1].
 %
 %   v_B = DCM * v_N 
 % 
@@ -17,11 +18,7 @@ function [psi, theta, phi] = dcmToEuler321(DCM)
 %
 %   Examples
 %   --------
-%   DCM = dcmToEuler321([0 1 0;-1 0 0;1 0 0]);
-%
-%   Assumption
-%   ----------
-%   DCM must be an orthonormal matrix, with det(DCM) == 1.
+%   [psi,theta,phi] = dcmToEuler321([0 1 0;-1 0 0;1 0 0]);
 %
 %   References
 %   ----------
@@ -33,7 +30,7 @@ function [psi, theta, phi] = dcmToEuler321(DCM)
 %   Date: 2026-06-19
 
     arguments
-        DCM (3,3) double
+        DCM double {mustBeDCM}
     end
     
     psi   = atan2(DCM(1,2), DCM(1,1)); 

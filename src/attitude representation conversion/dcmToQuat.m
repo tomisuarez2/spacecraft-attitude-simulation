@@ -21,11 +21,7 @@ function beta = dcmToQuat(DCM, solutions)
 %
 %   Examples
 %   --------
-%   DCM = dcmToQuat([0 1 0;-1 0 0;1 0 0]);
-%
-%   Assumption
-%   ----------
-%   DCM must be an orthonormal matrix, with det(DCM) == 1.
+%   beta = dcmToQuat([0 1 0;-1 0 0;1 0 0]);
 %
 %   References
 %   ----------
@@ -39,7 +35,7 @@ function beta = dcmToQuat(DCM, solutions)
 %   Date: 2026-06-19
 
     arguments
-        DCM (3,3) double
+        DCM       double {mustBeDCM}
         solutions string = 'short'
     end
 

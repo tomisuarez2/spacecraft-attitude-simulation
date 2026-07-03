@@ -1,15 +1,21 @@
 function mustBePositiveDefinite(A)
 %MUSTBEPOSITIVEDEFINITE Validate that a matrix is positive definite.
 %
-%   MUSTBEPOSITIVEDEFINITE(A) throws an error if A is not a 3-by-3
+%   MUSTBEPOSITIVEDEFINITE(A) throws an error if A is not a n-by-n
 %   symmetric positive definite matrix.
 %
 %   Example
 %   -------
 %       arguments
-%           A (3,3) double {mustBePositiveDefinite}
+%           A (n,n) double {mustBePositiveDefinite}
 %       end
 %
+%   Author: Tomás M. Suárez
+%   Date: 2026-07-2026
+
+    arguments
+        A double {mustBeFinite}
+    end
 
     % Check symmetry
     if ~issymmetric(A)

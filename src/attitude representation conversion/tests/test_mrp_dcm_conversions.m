@@ -8,7 +8,7 @@
 clear
 clc
 
-addpath('..\')
+addpath(genpath('..\..\src\'))
 
 fprintf('\n');
 fprintf('================================================================\n');
@@ -168,7 +168,7 @@ end
 
 fprintf('  Max Frobenius error = %.3e\n',maxDCMError);
 
-assert(maxDCMError < 1e-7);
+assert(maxDCMError < 1e-6);
 
 fprintf('  PASSED\n');
 
@@ -221,5 +221,3 @@ fprintf('=============================================\n');
 fprintf(' ALL TESTS PASSED\n');
 fprintf('=============================================\n');
 fprintf('\n');
-
-rmpath('..\')

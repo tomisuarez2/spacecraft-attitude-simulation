@@ -3,7 +3,8 @@ function prps = dcmToPRPS(DCM, solutions)
 %
 %   Computes Principal Rotation Parameter Set values (phi,e1,e2,e3) 
 %   corresponding to a Direction Cosine Matrix that transforms vector 
-%   coordinates from the inertial frame N to the body frame B.  
+%   coordinates from the inertial frame N to the body frame B. 
+%   Implements method given in Eq. (3.74) of [1].
 %
 %   v_B = DCM * v_N 
 %
@@ -25,11 +26,7 @@ function prps = dcmToPRPS(DCM, solutions)
 %
 %   Examples
 %   --------
-%   DCM = dcmToPRPS([0 1 0;-1 0 0;1 0 0]);
-%
-%   Assumption
-%   ----------
-%   DCM must be an orthonormal matrix, with det(DCM) == 1.
+%   prps = dcmToPRPS([0 1 0;-1 0 0;1 0 0]);
 %
 %   References
 %   ----------
@@ -41,7 +38,7 @@ function prps = dcmToPRPS(DCM, solutions)
 %   Date: 2026-06-19
 
     arguments
-        DCM (3,3) double
+        DCM       double {mustBeDCM}
         solutions string = 'short'
     end
 

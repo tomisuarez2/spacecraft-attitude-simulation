@@ -8,7 +8,7 @@
 clear
 clc
 
-addpath('..\')
+genpath(genpath('..\..\src\'))
 
 fprintf('\n');
 fprintf('===============================================\n');
