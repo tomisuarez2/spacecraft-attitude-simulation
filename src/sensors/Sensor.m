@@ -1,0 +1,149 @@
+classdef (Abstract) Sensor
+    %SENSOR Abstract base class for all spacecraft sensors.
+    %
+    %   This abstract class defines the common interface and functionality
+    %   shared by every spacecraft sensor model.
+    %
+    %   Derived classes implement the specific measurement model while this
+    %   class manages generic sensor properties such as sampling period and
+    %   enable/disable state.
+    %
+    %   Properties
+    %   ----------
+    %   Name                     Sensor name.
+    %   Unit                     Measurement units.
+    %   SamplePeriod             Sensor sampling period [s].
+    %   LastSampleTime           Last measurement timestamp [s].
+    %   SensorMeasurementModel   Measurement error model.
+    %   Enabled                  Boolean indicating whether the sensor is enabled.
+    %
+    %   Author: Tomás M. Suárez
+    %   Date: 2026-07-05
+
+    properties (SetAccess = private, GetAccess = public)
+        Name                   (1,1) string = "Unnamed Sensor"
+
+        Unit                   (1,1) string = "[u]"
+
+        SamplePeriod           (1,1) double {mustBeNonnegative} = 0
+
+        LastSampleTime         (1,1) double = -inf
+
+        SensorMeasurementModel (1,1) MeasurementModel
+    end
+
+    properties (SetAccess = public, GetAccess = public)
+        Enabled                (1,1) logical = true
+    end
+
+    methods
+
+        function obj = Sensor(name, unit, samplePeriod, sensorMeasurementModel)
+
+            arguments
+                name                   (1,1) string = "Unnamed Sensor"
+                unit                   (1,1) string = "[u]"
+                samplePeriod           (1,1) double {mustBeNonnegative} = 0
+                sensorMeasurementModel (1,1) MeasurementModel = MeasurementModel()
+            end
+
+            obj.Name = name;
+            obj.Unit = unit;
+            obj.SamplePeriod = samplePeriod;
+            obj.SensorMeasurementModel = sensorMeasurementModel;
+
+        end
+
+        function tf = isMeasurementTime(obj,t)
+
+            arguments
+                obj
+                t (1,1) double {mustBeNonnegative}
+            end
+
+            if obj.SamplePeriod == 0
+                tf = true;
+                return
+            end
+
+            tf = (t - obj.LastSampleTime) >= obj.SamplePeriod;
+
+        end
+
+        function obj = updateSampleTime(obj,t)
+
+            arguments
+                obj
+                t (1,1) double {mustBeNonnegative}
+            end
+
+            obj.LastSampleTime = t;
+
+        end
+
+        function obj = enable(obj)
+
+            obj.Enabled = true;
+
+        end
+
+        function obj = disable(obj)
+
+            obj.Enabled = false;
+
+        end
+
+        function [obj, mMeas] = measure(obj, varargin)
+            %MEASURE Take sensor measurement.
+            %
+            %   Take sensor measurement according to the current spacecraft
+            %   state and enviroment.
+            %
+            %   Outputs
+            %   -------
+            %   mMeas  Sensor measurement.
+
+            if ~obj.Enabled
+                error("Sensor is disabled.")
+            end
+
+            mIdeal = obj.idealMeasurement(varargin);
+            
+            [obj.SensorMeasurementModel, mMeas, ~] = obj.SensorMeasurementModel.apply(mIdeal);
+
+        end
+
+    end
+
+    methods (Abstract)
+
+        idealMeas = idealMeasurement(obj, state, environment)
+        %IDEALMEASUREMENT Compute the ideal sensor measurement.
+        %
+        %   measurement = idealMeasurement(obj, state, environment) computes
+        %   the ideal (noise-free and bias-free) measurement produced by the
+        %   sensor for a given spacecraft state and environment.
+        %
+        %   Inputs
+        %   ------
+        %   obj          Sensor object.
+        %   state        Object containing the spacecraft state. Typical fields may include:
+        %                    - Attitude
+        %                    - Angular velocity
+        %                    - Position
+        %                    - Velocity
+        %
+        %   environment  Object containing the external environment. Typical fields may include:
+        %                    - Magnetic field
+        %                    - Sun vector
+        %                    - Atmospheric properties
+        %                    - Gravity model
+        %
+        %   Output
+        %   ------
+        %   measurement   Ideal sensor measurement.
+        %
+
+    end
+
+end

@@ -1,4 +1,4 @@
-function sigmaDot = computeMRPKinematics(sigma, w)
+function sigmaDot = computeMRPKinematics(sigma, omega_B)
 %COMPUTEMRPKINEMATICS Compute MRP kinematics from body angular velocity.
 %
 %   Computes the time rate of change of an MRP rigid body attitude representation based on an instantaneous
@@ -7,8 +7,8 @@ function sigmaDot = computeMRPKinematics(sigma, w)
 %
 %   Inputs
 %   ------
-%   sigma    Current MRP attitude representation [3x1] 
-%   w        Current body angular velocity, B frame components [3x1] [rad/s]
+%   sigma    Spacecraft MRP attitude representation [3x1]. 
+%   omega_B  Spacecraft angular velocity expressed in the body frame [3x1] [rad/s].
 %
 %   Outputs
 %   -------
@@ -21,7 +21,7 @@ function sigmaDot = computeMRPKinematics(sigma, w)
 %
 %   Implements
 %
-%   σ̇ = 1/4 B(σ)ω
+%   σ̇ = 1/4 B(σ)ω_B
 %
 %
 %   References
@@ -34,11 +34,11 @@ function sigmaDot = computeMRPKinematics(sigma, w)
 %   Date: 2026-06-25
 
     arguments
-        sigma (3,1) double {mustBeFinite}
-        w     (3,1) double {mustBeFinite}
+        sigma   (3,1) double {mustBeFinite}
+        omega_B (3,1) double {mustBeFinite}
     end
     
     B = computeBMRPMatrix(sigma);
-    sigmaDot = B*w/4;
+    sigmaDot = B*omega_B/4;
 
 end
