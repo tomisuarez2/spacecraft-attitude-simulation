@@ -94,11 +94,15 @@ classdef Magnetometer < VectorSensor
 
             arguments
                 obj
-                state      SpacecraftState
+                state       SpacecraftState
                 environment Environment
             end
             
             MagneticField_S = obj.DCM_SB * state.DCM_BN * environment.MagneticField_N;
+
+            if obj.NormalizedOutput
+                MagneticField_S = MagneticField_S/norm(MagneticField_S);
+            end
 
         end
 

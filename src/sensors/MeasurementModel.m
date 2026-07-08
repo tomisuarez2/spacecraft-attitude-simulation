@@ -99,7 +99,7 @@ classdef MeasurementModel
                 mTrue (:,1) double {mustBeFinite}
             end
 
-            N = length(mTrue);
+            N = size(mTrue,1);
 
             % Measurement noise
             if isempty(obj.NoiseCovariance)

@@ -93,7 +93,7 @@ classdef (Abstract) Sensor
 
         end
 
-        function [obj, mMeas] = measure(obj, varargin)
+        function [obj, mMeas] = measure(obj, state, environment)
             %MEASURE Take sensor measurement.
             %
             %   Take sensor measurement according to the current spacecraft
@@ -103,11 +103,17 @@ classdef (Abstract) Sensor
             %   -------
             %   mMeas  Sensor measurement.
 
+            arguments
+                obj
+                state       SpacecraftState
+                environment Environment
+            end
+
             if ~obj.Enabled
                 error("Sensor is disabled.")
             end
 
-            mIdeal = obj.idealMeasurement(varargin);
+            mIdeal = obj.idealMeasurement(state, environment);
             
             [obj.SensorMeasurementModel, mMeas, ~] = obj.SensorMeasurementModel.apply(mIdeal);
 
@@ -115,7 +121,7 @@ classdef (Abstract) Sensor
 
     end
 
-    methods (Abstract)
+    methods (Abstract, Access = protected)
 
         idealMeas = idealMeasurement(obj, state, environment)
         %IDEALMEASUREMENT Compute the ideal sensor measurement.

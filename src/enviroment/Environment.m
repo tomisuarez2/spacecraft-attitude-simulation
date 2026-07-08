@@ -7,13 +7,29 @@ classdef Environment
     %
     %   Properties
     %   ----------
-    %   MagneticField_N Earth's magnetic field vector expressed in the inertial reference frame N [3x1] [T].
-    %   SunVector_N     Unit vector pointing from the spacecraft toward the Sun, 
-    %                   expressed in the inertial reference frame N [3x1].
+    %   MagneticField_N   Earth's magnetic field vector expressed in the inertial reference frame N [3x1] [T].
+    %   SunOrientation_N  Unit vector pointing from the spacecraft toward the Sun, 
+    %                     expressed in the inertial reference frame N [3x1].
 
     properties (SetAccess = public, GetAccess = public)
-        MagneticField_N (3,1) double {mustBeFinite} = zeros(3,1)
-        SunVector_N     (3,1) double {mustBeFinite} = [1;0;0]
+        MagneticField_N   (3,1) double {mustBeFinite} = zeros(3,1)
+        SunOrientation_N  (3,1) double {mustBeFinite} = [1;0;0]
+    end
+
+    methods (Access = public)
+         
+        function obj = Environment(magneticField_N, sunOrientation_N)
+
+            arguments
+                magneticField_N  (3,1) double {mustBeFinite} = zeros(3,1)
+                sunOrientation_N (3,1) double {mustBeFinite} = [1;0;0]
+            end
+
+            obj.MagneticField_N  = magneticField_N;
+            obj.SunOrientation_N = sunOrientation_N;
+
+        end
+        
     end
 
 end

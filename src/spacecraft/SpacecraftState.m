@@ -18,8 +18,26 @@ classdef SpacecraftState
     %   omega_B  Spacecraft angular velocity expressed in the body frame [3x1] [rad/s].
 
     properties(SetAccess = public, GetAccess = public)
-        DCM_BN        double {mustBeDCM} = eye(3)
-        omega_B (3,1) double {mustBeFinite} = zeros(3,1)
+        DCM_BN        double {mustBeFinite}
+        omega_B (3,1) double {mustBeFinite}
+    end
+
+    methods (Access = public)
+    
+        function obj = SpacecraftState(DCM_BN, omega_B)
+
+            arguments
+                DCM_BN        double {mustBeFinite} = eye(3)
+                omega_B (3,1) double {mustBeFinite} = zeros(3,1)
+            end
+
+            mustBeDCM(DCM_BN);
+
+            obj.DCM_BN  = DCM_BN;
+            obj.omega_B = omega_B;
+
+        end
+
     end
 
 end
