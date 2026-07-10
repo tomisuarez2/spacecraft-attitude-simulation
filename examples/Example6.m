@@ -14,17 +14,20 @@ clc;
 p = genpath("..\src");
 addpath(p)
 
-% Sensor objects examples.
-% Magnetometer and Sun sensor.
-
-%% Inertial reference enviroment
-
-environment = Environment([2 3 4]', [1 0 0]');
-
-%% Sensors
+%% Initialization 
 
 samplePeriod = 0.2; % [s]
 simulationTime = 10; % [s]
+
+time = 0:samplePeriod:simulationTime; % [s]
+
+N = numel(time);
+
+%% Inertial reference enviroment
+
+environment = Environment([2 3 4]', [1 0 0]'); % Magnetic field and Sun orientation vector
+
+%% Sensors
 
 noiseCovariance = 1e-3*eye(3);
 
@@ -32,7 +35,7 @@ magMeasModel = MeasurementModel(noiseCovariance, [], [], []);
 sunMeasModel = MeasurementModel(noiseCovariance, [], [], []);
 
 magnetometer = Magnetometer(samplePeriod, magMeasModel, eye(3), true);
-sunSensor    = SunSensor(samplePeriod, sunMeasModel, eye(3));
+sunSensor    = SunSensor(samplePeriod, sunMeasModel, [1 0 0; 0 0 -1; 0 1 0]);
 
 %% Spacecraft State
 
@@ -45,16 +48,14 @@ sigma_B = @(t)[0.1*sin(0.03*t);
                0.2*cos(0.03*t);
               -0.3*sin(0.06*t)];
 
+%% Ground truth attitude
+
+sigmaHistory = sigma_B(time);
+
 %% Sensor measurements
-
-time = 0:samplePeriod:simulationTime; % [s]
-
-N = numel(time);
 
 magMeasurements = zeros(3,N);
 sunMeasurements = zeros(3,N);
-
-sigmaHistory = sigma_B(time);
 
 for idx = 1:N
     state.DCM_BN = mrpToDCM(sigmaHistory(:,idx));
