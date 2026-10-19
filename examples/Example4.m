@@ -9,11 +9,15 @@
 %       Analytical Mechanics of Space Systems,
 %       2nd Edition, AIAA, 2009.
 
-close;
+close all;
 clear;
 clc;
 
-p = genpath("..\src");
+% Linux OS
+p = genpath("../src");
+% Windows OS
+%p = genpath("..\src");
+
 addpath(p)
 
 % Dynamics numerical integration with control law trying to arrest rotational motion

@@ -1,0 +1,29 @@
+PDS_VERSION_ID                = PDS3
+RECORD_TYPE                   = STREAM
+OBJECT                        = TEXT
+  NOTE                        = "Comments on the Stardust Wild 2
+                                 Encounter Dynamic Science Experiment
+                                 Archive"
+  PUBLICATION_DATE            = 2004-09-15
+END_OBJECT                    = TEXT
+END
+ 
+ 
+Comments on Stardust Wild 2 Encounter Dynamic Science Archive
+=============================================================
+ 
+   This document contains comments and errata concerning the Stardust
+   Wild 2 Encounter Dynamic Science Experiment Data Archive (volumes
+   SDDS_0001.)
+
+
+Non-standard Values of PRODUCT_TYPE
+-----------------------------------
+
+   The following values of the PRODUCT_TYPE keyword from the data product
+   labels are not from the standard value set provided for this keyword in
+   the PDS data dictionary:
+
+      AACS_TELEMETRY
+      SMALL_FORCES
+

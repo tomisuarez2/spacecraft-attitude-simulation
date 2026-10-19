@@ -1,0 +1,19 @@
+PDS_VERSION_ID    = PDS3
+RECORD_TYPE       = STREAM
+^PDF_DOCUMENT     = "SFF_SIS_SDU.PDF"
+
+OBJECT                = PDF_DOCUMENT
+  DOCUMENT_NAME       = "Small Force File (SFF) SIS for Stardust SFF."
+  DOCUMENT_TOPIC_TYPE = "SOFTWARE INTERFACE SPECIFICATION"
+  INTERCHANGE_FORMAT  = BINARY
+  DOCUMENT_FORMAT     = "ADOBE PDF"
+  DESCRIPTION         = "This document is the multi-mission Small Forces 
+                         File (SFF) Software Interface Specification
+                         document, edited down to provide
+                         detailed information only for the Stardust SFF
+                         implementation. This file is intended to be
+                         viewed using a PDF reader such as Adobe
+                         Acrobat."
+  PUBLICATION_DATE    = 2004-09-15
+END_OBJECT            = PDF_DOCUMENT
+END

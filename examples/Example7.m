@@ -20,11 +20,11 @@
 %   Author: Tomás M. Suárez
 %   Date: 2026-07-10
 
-close;
-clear;
-clc;
+% Linux OS
+p = genpath("../src");
+% Windows OS
+%p = genpath("..\src");
 
-p = genpath("..\src");
 addpath(p)
 
 %% Initialization 

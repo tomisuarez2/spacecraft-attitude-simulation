@@ -1,0 +1,25 @@
+PDS_VERSION_ID          = PDS3                                      
+RECORD_TYPE             = STREAM                                    
+                                                                     
+OBJECT                  = TEXT                                   
+   INTERCHANGE_FORMAT   = ASCII                                  
+   PUBLICATION_DATE     = 2004-07-02                             
+   NOTE                 = "Documents accompanying Stardust Wild 2 
+                           Encounter Dynamic Science Experiment Data 
+                           archive."          
+END_OBJECT              = TEXT                                   
+                                                                     
+END  
+                                                                     
+Documents in this directory
+===========================
+
+  SFF_SIS_SDU.PDF file is the multi-mission Small Force File (SFF)
+  SIS, edited down to contain detailed information only for
+  Stardust, provided in Adobe PDF format. SFF_SIS_SDU.LBL is the
+  detached PDS label for this document.
+  
+  The other document provided in this directory is ONLABELS.TXT. It
+  describes the keywords and values found in the Dynamic Science
+  Experiment data product labels.
+

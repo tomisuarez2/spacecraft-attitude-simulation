@@ -1,0 +1,404 @@
+PDS_VERSION_ID          = PDS3
+LABEL_REVISION_NOTE     = "
+  2000-09-14 SDU:Taylor   Initial version;
+  2003-02-25 NAIF:Semenov Pre 2003 peer-review update;
+  2004-06-10 NAIF:Semenov Post 2003 peer-review update;
+  2005-03-01 NAIF:Semenov Post 2004 peer-review update
+  "
+
+RECORD_TYPE             = STREAM
+
+OBJECT                  = MISSION
+  MISSION_NAME          = "STARDUST"
+
+  OBJECT                = MISSION_INFORMATION
+    MISSION_START_DATE  = 1999-02-07
+    MISSION_STOP_DATE   = UNK
+    MISSION_ALIAS_NAME  = "N/A"
+    MISSION_DESC        = "
+
+      This description was copied from ``Stardust Mission Plan''
+      document and its addendum with permission from the Stardust
+      project and later revised by Edward Hirst, Stardust Mission
+      System Manager to address liens from 2004 peer-review.
+
+    Mission Overview
+    ================
+
+      The primary science goal of the STARDUST mission is to collect
+      Wild 2 coma samples, plus bonus interstellar dust samples, in
+      aerogel, and return them to Earth. Additional science return
+      was accomplished in the form of images of the comet coma and
+      nucleus, Comet and Interstellar Dust Analyzer (CIDA) based dust
+      particle analysis and Dust Flux Monitor via an instrumented
+      comet dust shield.
+
+      Trajectory
+      ----------
+        The STARDUST mission was designed for a low velocity (6.1
+        km/s) flyby of the comet Wild 2 during its active period (at
+        a solar distance of 1.9 AU) and to have a low energy Earth
+        returning trajectory.
+
+        The first orbital loop was a two year loop with a 170 m/s
+        deterministic delta-V near aphelion. Deep Space Maneuver #1
+        (DSM1) set up the orbit for an Earth swing-by that pumped
+        the orbit up to a 2.5 year loop. The spacecraft stayed on
+        this loop twice and encountered the comet Wild 2 approximately
+        163 days after the second perihelion of the mission, 98.5
+        days after the comet's perihelion. A small, 3 m/s,
+        deterministic maneuver (DSM2) was required near the second
+        aphelion to maintain the desired trajectory. At
+        approximately 199 days before encountering Wild 2, the third
+        deterministic delta-V (DSM3, 71 m/s) was performed to properly
+        target to Wild 2. The last deterministic maneuver, DSM4, was
+        also small, 5 m/s, was performed after the Wild 2 encounter,
+        and was used to target back to Earth.
+
+      Comet Encounter
+      ---------------
+        The spacecraft was aimed to flyby the comet on the sun-ward
+        side at a closest flyby distance of 250 km with a delivery
+        uncertainty of 16 km (1-sigma). The relative velocity
+        between the comet and the spacecraft was such that it was the
+        comet that was actually catching up with the spacecraft from
+        behind in their travel around the Sun. The spacecraft
+        approached Wild 2 on the sun-lit side with a phase angle of
+        73 degrees, reached a minimum approaching 0 degrees near
+        closest approach and departed at a phase angle of 107
+        degrees.
+
+      Interstellar Dust Collection
+      ----------------------------
+        The interstellar dust collection periods were planned to be
+        near the first and second near-aphelion portions of the
+        trajectory when the spacecraft velocity direction was such
+        that the spacecraft-dust relative velocity was at a minimum.
+        Though possible, no collection was performed on the third loop
+        as it was undesirable to re-open the SRC after comet
+        encounter. In addition to the favorable velocity alignment,
+        these collection periods were further defined by the need to
+        avoid large off-Sun pointing of the solar panels, collection
+        of solar beta meteoroids, and execution of deep space maneuvers.
+
+      Particle Analysis
+      -----------------
+        CIDA and DFMI experiment periods were planned at every
+        available opportunity during the mission. The main constraint
+        on their operation was the availability of spacecraft
+        power and conflicts with other mission activities. Prime
+        experiment periods were defined, however, as those where the
+        interstellar particle was made to fall within the CIDA
+        field-of-view. In general, these periods coincided with the
+        outbound (post-perihelion) segments of loops 1 and 2. After
+        launch, DFMI operation was eliminated these experiment periods
+        due to a flight anomaly that allowed the DFMI to operate 
+        correctly for periods lasting only approximately 35 minutes.
+        This operation time was sufficient to support comet encounter,
+        but not extended cruise experiments.
+
+      Earth Return
+      ------------
+        Upon Earth return, the Sample Return Capsule (SRC) will
+        directly enter the atmosphere and land with the aid of a
+        parachute. The planned landing site is the Utah Test and
+        Training Range (UTTR). Following touchdown, the SRC will be
+        recovered by helicopter or ground vehicles and transported to
+        the staging area at UTTR for the retrieval of the sample
+        canister. The canister will then be transported to the
+        planetary materials curatorial facility at Johnson Space
+        Center.
+
+        A divert maneuver will be performed on the spacecraft after
+        the release of the SRC. The maneuver will re-target the
+        spacecraft to prevent re-entry into Earth's atmosphere and
+        will place the spacecraft in a heliocentric orbit.
+
+
+    Mission Phases
+    ==============
+
+      Six mission phases were originally defined for significant
+      spacecraft activity periods. These were the Launch, Cruise 1,
+      Earth Gravity Assist, Cruise 2, Wild 2 Encounter, Cruise 3,
+      and Earth Return. One more mission phase -- Annefrank
+      Encounter, -- completely nested inside the Cruise 2 was
+      added in 2002 when the asteroid flyby was approved 
+      as a full scale Wild 2 encounter test.
+
+      LAUNCH
+      ------
+
+        Mission Phase Start Time       : 1999-02-07
+        Mission Phase Stop Time        : 1999-03-09
+
+        The launch phase began at the launch vehicle lift-off and
+        ended with the completion of the activation and checkout of
+        most of the spacecraft subsystems. Included in this phase
+        were spacecraft separation from the launch vehicle,
+        establishment of attitude and communications, tracking of the
+        spacecraft and the execution of the first trajectory
+        correction maneuver (TCM-1) to correct the injection error.
+        TCM-1 was canceled shortly after launch due to very small
+        launch injection errors. 
+
+        The duration of this phase was 30 days.
+
+      CRUISE 1
+      --------
+
+        Mission Phase Start Time       : 1999-03-09
+        Mission Phase Stop Time        : 2000-11-16
+
+        The Cruise 1 phase was the first of three periods of relatively
+        low activity. This period spanned from launch through the Earth
+        flyby. Within this phase was embedded the first ISP collection
+        period and the CIDA experiment. The ISP collection period during
+        this phase of the mission started 380 days after launch and
+        continued for 69 days.
+
+      EARTH GRAVITY ASSIST
+      --------------------
+
+        Mission Phase Start Time       : 2000-11-16
+        Mission Phase Stop Time        : 2001-02-14
+
+        The Earth flyby was performed primarily to provide a gravity
+        assist to the STARDUST spacecraft thus reducing the delta-V
+        requirements of the mission. The flyby changed the orbital
+        period from 2 years to about 2.5 years. The spacecraft
+        approached Earth with a velocity of 6.5 km/s from the dark
+        side and recedes back into the dark side having flown by the
+        sunward side. At closest approach, the altitude was ~6010 km,
+        at -40.5 degrees latitude and 38.1 degrees longitude (east of
+        South Africa). During the flyby the Sun-Earth-Probe angle 
+        cycled from ~130 degrees to ~28 degrees at closest approach to a
+        minimum of ~19 degrees (8 minutes after closest approach) and back
+        up to ~90 degrees toward the end of the EGA phase. The Earth flyby
+        time was 15 January 2001 11:14:28 UTC.
+
+        One special activity was planned during the Earth Gravity
+        Assist (EGA) phase, and it was use of the navigation camera to
+        take 21 images of the Moon.
+
+      CRUISE 2
+      --------
+
+        Mission Phase Start Time       : 2001-02-14
+        Mission Phase Stop Time        : 2003-09-24
+
+        The Cruise 2 phase was the second part of cruise, spanning from
+        the Earth flyby through the Wild 2 encounter. Within this
+        phase were embedded the second ISP collection period and the
+        CIDA experiment. The ISP collection period during this phase
+        of the mission started 1275 days after launch and continued for
+        126 days, with a brief interruption to conduct the Annefrank
+        encounter.
+
+      ANNEFRANK ENCOUNTER
+      -------------------
+
+        Mission Phase Start Time       : 2002-10-31
+        Mission Phase Stop Time        : 2002-11-05
+
+        This phase was the part of the mission, during which STARDUST
+        flew by an S-type, main belt asteroid called Annefrank. The
+        Annefrank flyby occurred with just over one month (out of four)
+        remaining in the second interstellar particle collection
+        period and was fully embedded with Cruise 2 phase of the
+        mission.
+
+        This encounter was not present in original mission plan and
+        was added in 2002 as a full scale Wild 2 encounter test.
+        The main objective and supporting rationale for this test was
+        to implement the entire Wild 2 encounter sequence in flight
+        at Annefrank.
+
+        The science potential as a result of the Annefrank flyby was
+        limited but significant. Given the test nature of the
+        activities, no special accommodations were made to enhance
+        science. However, the images obtained during the flyby helped
+        address questions of asteroid diversity by providing the first
+        information on a few kilometer diameter, S-type, main belt
+        asteroid.
+
+        The spacecraft flew past Annefrank on 2 November 2002 at
+        4:51:20 UTC and a closest approach distance of 3079 km. 
+        Annefrank was found to be 25 pixels by 35 pixels at its
+        largest in the closest approach images, and the imaging
+        sequence encompassed a solar phase angle range from 130 deg
+        to 47 deg. Even at this size and low spatial image resolution, 
+        the images helped address questions of size, shape, albedo 
+        variation, phase function and the photometric phase function.
+
+      WILD 2 ENCOUNTER
+      ----------------
+
+        Mission Phase Start Time       : 2003-09-24
+        Mission Phase Stop Time        : 2004-02-21
+
+        The most important mission phase of STARDUST started
+        100 days prior to and ended 50 days after comet encounter
+        (Launch+1790.9 days). Independent of launch date, encounter
+        with comet Wild 2 occurred at 2 January 2004 19:21:32 UTC.
+
+        The primary goal of obtaining comet coma samples during the
+        encounter flyby was accomplished by a navigation plan that
+        delivered the spacecraft with the required accuracy to a fly
+        by distance of 236 km, as a balance between spacecraft survival
+        and dust collection as per best known dust production models.
+
+        Near the closest encounter, the spacecraft +x-axis was pointed 
+        in the S/C to Wild 2 relative velocity direction such that the 
+        dust shield protected the S/C. By design, in this flyby
+        configuration, the Earth was located in the direction of the
+        spacecraft +z-axis (also high gain antenna direction). The
+        spacecraft approached Wild 2 from above and receded under the
+        comet's orbit plane.
+
+        Although the collection of cometary dust samples was the
+        primary goal of the mission, it was totally passive. Occurring
+        mostly during the closest encounter, it was enabled by
+        deployment of the aerogel collector and the setting of the
+        spacecraft / collector attitude perpendicular to the dust
+        stream. Collector deployment occurred 9 days prior to encounter,
+        and the encounter spacecraft attitude was established after the
+        last executed pre-encounter TCM performed at E-2 days. The 
+        collector stayed deployed until approximately E+5 hours, which 
+        was approximately when the spacecraft exited the comet coma.
+
+        A number of images were taken during the encounter. Coma
+        images were acquired primarily during the far encounter
+        part of this phase of the mission. Two images of the nucleus
+        were taken and transmitted to Earth from E-5 hours to E-30 min.
+        Approximately 120 images were taken between E-30 min to E-8 min,
+        the bulk of them concentrated during the period between E+/- 5
+        minutes, during the closest approach. Of those, 72 images were
+        were stored on board the spacecraft and transmitted to Earth 
+        after the encounter, including pairs that were used for stereo
+        imaging. The solar phase angle for these images ranged from 
+        72 deg at the start, dropped to a minimum of 3 deg and increased
+        to 103 deg by the end.
+
+        At E-5 hours, communications was continuous and CIDA data was
+        be included in the telemetry to Earth. The DFMI was turned on
+        at approximately E-15 min and its data were added to the telemetry
+        stream. Science data transmissions to Earth ceased at E-8 min, 
+        and all subsequent data was stored on board the spacecraft and
+        transmitted to Earth after the encounter. It was after this time
+        that most, if not all, dust related activity occurred.
+
+        This engineering data only configuration was held from E-8 min to
+        E+12 min to protect against data loss as a result of a roll
+        maneuver that was performed at E-6 min to keep the comet trajectory
+        in the navigation camera's mirror panning plane. A roll back was
+        performed at E+6 min. The magnitude of the roll angle required 
+        during the flyby was 4 degrees.
+
+      EARTH RETURN
+      ------------
+
+        Mission Phase Start Time       : 2005-10-17
+        Mission Phase Stop Time        : 2006-01-16
+
+        This phase of the mission begins 90 days before Earth Return
+        (ER) and ends when the Sample Return Capsule (SRC) is
+        transferred to the ground handling team. Earth approach
+        contains three TCM's and a final divert maneuver, performed
+        after SRC separation, to prevent the spacecraft from
+        following the SRC into the Earth's atmosphere. Prior to
+        separation, the spacecraft will be placed at the separation
+        attitude and the SRC will be spun up using a spin release
+        mechanism. This will provide the spin stabilization that the
+        SRC requires for successful atmospheric entry. Immediately
+        following release, the SRC will be imaged using the imaging
+        camera. Although these images will have minimal OPNAV value,
+        they are considered of high Public Information value. Earth
+        Return will occur on 15 January 2006 09:58 ET
+
+        The SRC aeroshell will protect the sample canister against
+        the extreme aerodynamic heating experienced during
+        atmospheric entry. The aeroshell also removes over 99 percent
+        of the initial kinetic energy thus allowing the parachute
+        system to place the SRC within the allowable touchdown
+        requirements.
+
+        The landing site is the Utah Test and Training Range (UTTR).
+        Following touchdown, the SRC will be recovered by helicopter
+        or ground vehicles and will be transported to a staging area
+        at UTTR for the retrieval of the sample canister. The
+        canister will then be transported to the Planetary Materials
+        Curatorial Facility at Johnson Space Center."
+
+    MISSION_OBJECTIVES_SUMMARY = "
+
+      The primary science goal of the STARDUST mission is to collect
+      Wild 2 coma samples, plus bonus interstellar dust samples, in
+      aerogel, and return them to Earth. Additional science return was
+      accomplished in the form of images of the comet coma and nucleus,
+      Comet and Interstellar Dust Analyzer (CIDA) based dust particle
+      analysis and Dust Flux Monitor via an instrumented comet dust
+      shield.
+
+      These science goals lead to the following objectives in the
+      design of the STARDUST mission:
+
+      1) Provided a flyby of a comet of interest (Wild 2) at a
+      sufficiently low velocity (less than 6.5 km/s) such that
+      non-destructive capture of comet dust was possible using an
+      aerogel collector.
+
+      2) Facilitated the intercept of significant numbers of
+      interstellar dust particles using the same collection medium,
+      also at as low a velocity as possible.
+
+      3) Returned as many high resolution images of the comet coma and
+      nucleus as possible, subject to the cost constraints of the
+      mission."
+
+  END_OBJECT            = MISSION_INFORMATION
+
+  OBJECT                = MISSION_HOST
+    INSTRUMENT_HOST_ID  = "SDU"
+
+    OBJECT              = MISSION_TARGET
+      TARGET_NAME       = "81P/WILD 2 (1978 A2)"
+    END_OBJECT          = MISSION_TARGET
+
+    OBJECT              = MISSION_TARGET
+      TARGET_NAME       = "5535 ANNEFRANK"
+    END_OBJECT          = MISSION_TARGET
+
+  END_OBJECT            = MISSION_HOST
+
+  OBJECT                = MISSION_REFERENCE_INFORMATION
+    REFERENCE_KEY_ID    = "BROWNLEEETAL2003"
+  END_OBJECT            = MISSION_REFERENCE_INFORMATION
+
+  OBJECT                = MISSION_REFERENCE_INFORMATION
+    REFERENCE_KEY_ID    = "TSOUETAL2003"
+  END_OBJECT            = MISSION_REFERENCE_INFORMATION
+
+  OBJECT                = MISSION_REFERENCE_INFORMATION
+    REFERENCE_KEY_ID    = "KISSELETAL2003"
+  END_OBJECT            = MISSION_REFERENCE_INFORMATION
+
+  OBJECT                = MISSION_REFERENCE_INFORMATION
+    REFERENCE_KEY_ID    = "TUZZOLINOETAL2003"
+  END_OBJECT            = MISSION_REFERENCE_INFORMATION
+
+  OBJECT                = MISSION_REFERENCE_INFORMATION
+    REFERENCE_KEY_ID    = "NEWBURNETAL2003"
+  END_OBJECT            = MISSION_REFERENCE_INFORMATION
+
+  OBJECT                = MISSION_REFERENCE_INFORMATION
+    REFERENCE_KEY_ID    = "ANDERSONETAL2003"
+  END_OBJECT            = MISSION_REFERENCE_INFORMATION
+
+  OBJECT                = MISSION_REFERENCE_INFORMATION
+    REFERENCE_KEY_ID    = "SEKANINAETAL2003"
+  END_OBJECT            = MISSION_REFERENCE_INFORMATION
+
+END_OBJECT              = MISSION
+
+END

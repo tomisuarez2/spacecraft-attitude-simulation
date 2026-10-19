@@ -1,0 +1,207 @@
+OBJECT          = COLUMN
+  NAME          = "UTC_TIME"
+  COLUMN_NUMBER = 1
+  DATA_TYPE     = TIME
+  START_BYTE    = 1
+  BYTES         = 23
+  FORMAT        = "A23"
+  DESCRIPTION   = "UTC time."
+END_OBJECT      = COLUMN
+
+OBJECT          = COLUMN
+  NAME          = "ACS_MODE"
+  COLUMN_NUMBER = 2
+  DATA_TYPE     = CHARACTER
+  START_BYTE    = 26
+  BYTES         = 7
+  FORMAT        = "A7"
+  DESCRIPTION   = "Attitude Control Subsystem (ACS) mode."
+END_OBJECT      = COLUMN
+
+OBJECT          = COLUMN
+  NAME          = "ATT_QU_I2B_1"
+  COLUMN_NUMBER = 3
+  DATA_TYPE     = ASCII_REAL
+  START_BYTE    = 35
+  BYTES         = 12
+  FORMAT        = "F12.9"
+  DESCRIPTION   = "Current Spacecraft Attitude Quaternion Based 
+                   on the Current AD State Running. 1st Element. This
+                   quaternion rotates a vector in Earth-Mean-Equator
+                   J2000 frame into the spacecraft frame. It follows
+                   the convention identified as ``the second system''
+                   in the dictionary definition of the standard PDS
+                   keyword QUATERNION_DESC."
+END_OBJECT      = COLUMN
+
+OBJECT          = COLUMN
+  NAME          = "ATT_QU_I2B_2"
+  COLUMN_NUMBER = 4
+  DATA_TYPE     = ASCII_REAL
+  START_BYTE    = 48
+  BYTES         = 12
+  FORMAT        = "F12.9"
+  DESCRIPTION   = "Current Spacecraft Attitude Quaternion Based 
+                   on the Current AD State Running. 2nd Element. This
+                   quaternion rotates a vector in Earth-Mean-Equator
+                   J2000 frame into the spacecraft frame. It follows
+                   the convention identified as ``the second system''
+                   in the dictionary definition of the standard PDS
+                   keyword QUATERNION_DESC."
+END_OBJECT      = COLUMN
+
+OBJECT          = COLUMN
+  NAME          = "ATT_QU_I2B_3"
+  COLUMN_NUMBER = 5
+  DATA_TYPE     = ASCII_REAL
+  START_BYTE    = 61
+  BYTES         = 12
+  FORMAT        = "F12.9"
+  DESCRIPTION   = "Current Spacecraft Attitude Quaternion Based 
+                   on the Current AD State Running. 3rd Element. This
+                   quaternion rotates a vector in Earth-Mean-Equator
+                   J2000 frame into the spacecraft frame. It follows
+                   the convention identified as ``the second system''
+                   in the dictionary definition of the standard PDS
+                   keyword QUATERNION_DESC."
+END_OBJECT      = COLUMN
+
+OBJECT          = COLUMN
+  NAME          = "ATT_QU_I2B_4"
+  COLUMN_NUMBER = 6
+  DATA_TYPE     = ASCII_REAL
+  START_BYTE    = 74
+  BYTES         = 12
+  FORMAT        = "F12.9"
+  DESCRIPTION   = "Current Spacecraft Attitude Quaternion Based 
+                   on the Current AD State Running. Scalar Component.
+                   This quaternion rotates a vector in
+                   Earth-Mean-Equator J2000 frame into the spacecraft
+                   frame. It follows the convention identified as ``the
+                   second system'' in the dictionary definition of the
+                   standard PDS keyword QUATERNION_DESC."
+END_OBJECT      = COLUMN
+
+OBJECT          = COLUMN
+  NAME          = "ATT_RAT_BF_X"
+  COLUMN_NUMBER = 7
+  DATA_TYPE     = ASCII_REAL
+  START_BYTE    = 87
+  BYTES         = 12
+  FORMAT        = "F12.9"
+  DESCRIPTION   = "Current Spacecraft Angular Rates in the 
+                   Spacecraft Body Frame Based on the Current AD State 
+                   Running. Radians/sec. X-Axis Component."
+  UNIT          = "RADIAN PER SECOND"
+END_OBJECT      = COLUMN
+
+OBJECT          = COLUMN
+  NAME          = "ATT_RAT_BF_Y"
+  COLUMN_NUMBER = 8
+  DATA_TYPE     = ASCII_REAL
+  START_BYTE    = 100
+  BYTES         = 12
+  FORMAT        = "F12.9"
+  DESCRIPTION   = "Current Spacecraft Angular Rates in the 
+                   Spacecraft Body Frame Based on the Current AD State 
+                   Running. Radians/sec. Y-Axis Component."
+  UNIT          = "RADIAN PER SECOND"
+END_OBJECT      = COLUMN
+
+OBJECT          = COLUMN
+  NAME          = "ATT_RAT_BF_Z"
+  COLUMN_NUMBER = 9
+  DATA_TYPE     = ASCII_REAL
+  START_BYTE    = 113
+  BYTES         = 12
+  FORMAT        = "F12.9"
+  DESCRIPTION   = "Current Spacecraft Angular Rates in the 
+                   Spacecraft Body Frame Based on the Current AD State 
+                   Running. Radians/sec. Z-Axis Component."
+  UNIT          = "RADIAN PER SECOND"
+END_OBJECT      = COLUMN
+
+OBJECT          = COLUMN
+  NAME          = "ATT_ERR_BF_X"
+  COLUMN_NUMBER = 10
+  DATA_TYPE     = ASCII_REAL
+  START_BYTE    = 126
+  BYTES         = 12
+  FORMAT        = "F12.9"
+  DESCRIPTION   = "Current S/C Angular Attitude Error in 
+                   the Spacecraft Body Frame, Phased as Current Attitude 
+                   Subtracted from Reference Attitude. Radians. 
+                   X-Axis Component."
+  UNIT          = "RADIAN"
+END_OBJECT      = COLUMN
+
+OBJECT          = COLUMN
+  NAME          = "ATT_ERR_BF_Y"
+  COLUMN_NUMBER = 11
+  DATA_TYPE     = ASCII_REAL
+  START_BYTE    = 139
+  BYTES         = 12
+  FORMAT        = "F12.9"
+  DESCRIPTION   = "Current S/C Angular Attitude Error in 
+                   the Spacecraft Body Frame, Phased as Current Attitude 
+                   Subtracted from Reference Attitude. Radians. 
+                   Y-Axis Component."
+  UNIT          = "RADIAN"
+END_OBJECT      = COLUMN
+
+OBJECT          = COLUMN
+  NAME          = "ATT_ERR_BF_Z"
+  COLUMN_NUMBER = 12
+  DATA_TYPE     = ASCII_REAL
+  START_BYTE    = 152
+  BYTES         = 12
+  FORMAT        = "F12.9"
+  DESCRIPTION   = "Current S/C Angular Attitude Error in 
+                   the Spacecraft Body Frame, Phased as Current Attitude 
+                   Subtracted from Reference Attitude. Radians. 
+                   Z-Axis Component."
+  UNIT          = "RADIAN"
+END_OBJECT      = COLUMN
+
+OBJECT          = COLUMN
+  NAME          = "RAT_ERR_BF_X"
+  COLUMN_NUMBER = 13
+  DATA_TYPE     = ASCII_REAL
+  START_BYTE    = 165
+  BYTES         = 12
+  FORMAT        = "F12.9"
+  DESCRIPTION   = "Current Spacecraft Angular Rate Error 
+                   in the Spacecraft Body Frame, Phased as Current Rate 
+                   Subtracted from Reference Rate. Radians/sec. 
+                   X-Axis Component."
+  UNIT          = "RADIAN PER SECOND"
+END_OBJECT      = COLUMN
+
+OBJECT          = COLUMN
+  NAME          = "RAT_ERR_BF_Y"
+  COLUMN_NUMBER = 14
+  DATA_TYPE     = ASCII_REAL
+  START_BYTE    = 178
+  BYTES         = 12
+  FORMAT        = "F12.9"
+  DESCRIPTION   = "Current Spacecraft Angular Rate Error 
+                   in the Spacecraft Body Frame, Phased as Current Rate 
+                   Subtracted from Reference Rate. Radians/sec. 
+                   Y-Axis Component."
+  UNIT          = "RADIAN PER SECOND"
+END_OBJECT      = COLUMN
+
+OBJECT          = COLUMN
+  NAME          = "RAT_ERR_BF_Z"
+  COLUMN_NUMBER = 15
+  DATA_TYPE     = ASCII_REAL
+  START_BYTE    = 191
+  BYTES         = 12
+  FORMAT        = "F12.9"
+  DESCRIPTION   = "Current Spacecraft Angular Rate Error 
+                   in the Spacecraft Body Frame, Phased as Current Rate 
+                   Subtracted from Reference Rate. Radians/sec. 
+                   Z-Axis Component."
+  UNIT          = "RADIAN PER SECOND"
+END_OBJECT      = COLUMN
+

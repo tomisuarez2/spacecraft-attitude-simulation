@@ -1,0 +1,64 @@
+PDS_VERSION_ID               = PDS3                                           
+                                                                              
+OBJECT                       = VOLUME                                         
+  VOLUME_SERIES_NAME         = "MISSION TO SMALL BODIES"                      
+  VOLUME_SET_NAME            = "STARDUST DYNAMIC SCIENCE DATA"                
+  VOLUME_SET_ID              = "USA_NASA_JPL_SDDS_XXXX"                       
+  VOLUMES                    = 1                                              
+  VOLUME_NAME                = "STARDUST WILD 2 ENCOUNTER DYNAMIC SCIENCE DATA
+  VOLUME_ID                  = "SDDS_0001"                                    
+  VOLUME_FORMAT              = "ISO-9660"                                     
+  VOLUME_VERSION_ID          = "VERSION 1"                                    
+  MEDIUM_TYPE                = "CD-ROM"                                       
+  DATA_SET_ID                = "SDU-C-DYNSCI-2-WILD2-V1.0"                    
+  PUBLICATION_DATE           = 2004-09-15                                     
+  DESCRIPTION                = "This volume contains the Dynamic Science      
+                                Experiment data collected by the              
+                                STARDUST spacecraft during Wild 2             
+                                encounter. The volume also contains           
+                                detailed documentation about the              
+                                mission, spacecraft, instrument, and          
+                                data set, as well as index tables."           
+                                                                              
+  OBJECT                     = DATA_SUPPLIER                                  
+    INSTITUTION_NAME         = "JET PROPULSION LABORATORY"                    
+    FACILITY_NAME            = "N/A"                                          
+    FULL_NAME                = "JOHN D. ANDERSON"                             
+    DISCIPLINE_NAME          = "SMALL BODIES"                                 
+    NODE_NAME                = "SMALL BODIES"                                 
+    ADDRESS_TEXT             = "JET PROPULSION LABORATORY\n                   
+                                4800 OAK GROVE DRIVE\n                        
+                                MAILSTOP 301-125L\n                           
+                                PASADENA, CA 91109\n                          
+                                USA"                                          
+    TELEPHONE_NUMBER         = "8183543956"                                   
+    ELECTRONIC_MAIL_TYPE     = "INTERNET"                                     
+    ELECTRONIC_MAIL_ID       = "JOHN.D.ANDERSON@JPL.NASA.GOV"                 
+  END_OBJECT                 = DATA_SUPPLIER                                  
+                                                                              
+  OBJECT                     = DATA_PRODUCER                                  
+    INSTITUTION_NAME         = "JET PROPULSION LABORATORY"                    
+    FACILITY_NAME            = "STARDUST DATA MANAGEMENT AND ARCHIVE TEAM"    
+    FULL_NAME                = "BORIS V. SEMENOV"                             
+    ADDRESS_TEXT             = "JET PROPULSION LABORATORY\n                   
+                                4800 OAK GROVE DRIVE\n                        
+                                MAILSTOP 301-125L\n                           
+                                PASADENA, CA 91109\n                          
+                                USA"                                          
+    TELEPHONE_NUMBER         = "8183548136"                                   
+    ELECTRONIC_MAIL_TYPE     = "INTERNET"                                     
+    ELECTRONIC_MAIL_ID       = "Boris.Semenov@jpl.nasa.gov"                   
+  END_OBJECT                 = DATA_PRODUCER                                  
+                                                                              
+  OBJECT                     = CATALOG                                        
+    ^DATA_SET_CATALOG        = "DATASET.CAT"                                  
+    ^INSTRUMENT_CATALOG      = "DYNSCI.CAT"                                   
+    ^INSTRUMENT_HOST_CATALOG = "SDU.CAT"                                      
+    ^MISSION_CATALOG         = "STARDUST.CAT"                                 
+    ^PERSONNEL_CATALOG       = "PERSONNEL.CAT"                                
+    ^TARGET_CATALOG          = "81P_WILD_2_1978_A2.CAT"                       
+    ^REFERENCE_CATALOG       = "REFERENCE.CAT"                                
+  END_OBJECT                 = CATALOG                                        
+                                                                              
+END_OBJECT                   = VOLUME                                         
+END                                                                           

@@ -1,0 +1,25 @@
+PDS_VERSION_ID          = PDS3 
+RECORD_TYPE             = STREAM 
+ 
+OBJECT                  = TEXT 
+   INTERCHANGE_FORMAT   = ASCII 
+   PUBLICATION_DATE     = 2004-09-15   
+   NOTE                 = "INDEX directory contents." 
+END_OBJECT              = TEXT 
+ 
+END 
+
+INDEX DIRECTORY CONTENTS
+---------------------------
+
+  The INDEX directory contains tabular files intended for database use.
+  Planetary Data System (PDS) label files accompany these files.
+
+  The following files are found in this directory.
+
+  INDXINFO.TXT - The file you are now reading.
+
+  INDEX.TAB    - Stardust Wild 2 Dynamic Science Experiment Data index table.
+
+  INDEX.LBL    - PDS detached label for INDEX.TAB.
+

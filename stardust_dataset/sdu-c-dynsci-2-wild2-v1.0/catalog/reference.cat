@@ -1,0 +1,68 @@
+PDS_VERSION_ID      = PDS3
+LABEL_REVISION_NOTE = "B. SEMENOV, 2004-06-15;"
+RECORD_TYPE         = STREAM
+
+OBJECT              = REFERENCE
+  REFERENCE_KEY_ID  = "BROWNLEEETAL2003"
+  REFERENCE_DESC    = "Brownlee, D. E., P. Tsou, J. D. Anderson, M. S.
+                       Hanner, R. L. Newburn, Z. Sekanina, B. C. Clark, M.
+                       E. Zolensky, J. Kissel, J. A. M. McDonnell, S. A.
+                       Sandford, and A. J. Tuzzolino, Stardust: Comet and
+                       interstellar dust sample return mission, J.
+                       Geophys. Res., 108, (E10), 8111, 2003"
+END_OBJECT          = REFERENCE
+
+OBJECT              = REFERENCE
+  REFERENCE_KEY_ID  = "TSOUETAL2003"
+  REFERENCE_DESC    = "Tsou, P., D. E. Brownlee, S. A. Sandford, F.
+                       Horz, and M. E. Zolensky, Wild 2 and interstellar
+                       sample collection and Earth return, J. Geophys.
+                       Res., 108, (E10), 8113, 2003"
+END_OBJECT          = REFERENCE
+
+OBJECT              = REFERENCE
+  REFERENCE_KEY_ID  = "KISSELETAL2003"
+  REFERENCE_DESC    = "Kissel, J., A. Glasmachers, E. Grun, H. Henkel,
+                       H. Hofner, G. Haerendel, H. von Hoener, K. Hornung,
+                       E. K. Jessberger, F. R. Krueger, D. Mohlmann, J. M.
+                       Greenberg, Y. Langevin, J. Silen, D. Brownlee, B.
+                       C. Clark, M. S. Hanner, F. Hoerz, S. Sandford, Z.
+                       Sekanina, P. Tsou, N. G. Utterback, M. E. Zolensky,
+                       and C. Heiss, Cometary and Interstellar Dust
+                       Analyzer for comet Wild 2, J. Geophys. Res., 108,
+                       (E10), 8114, 2003"
+END_OBJECT          = REFERENCE
+
+OBJECT              = REFERENCE
+  REFERENCE_KEY_ID  = "TUZZOLINOETAL2003"
+  REFERENCE_DESC    = "Tuzzolino, A. J., T. E. Economou, R. B.
+                       McKibben, J. A. Simpson, J. A. M. McDonnell, M. J.
+                       Burchell, B. A. M. Vaughan, P. Tsou, M. S. Hanner,
+                       B. C. Clark, and D. E. Brownlee, Dust Flux Monitor
+                       Instrument for the Stardust mission to comet Wild
+                       2, J. Geophys. Res., 108, (E10), 8115, 2003"
+END_OBJECT          = REFERENCE
+
+OBJECT              = REFERENCE
+  REFERENCE_KEY_ID  = "NEWBURNETAL2003"
+  REFERENCE_DESC    = "Newburn Jr., R. L., S. Bhaskaran, T. C. Duxbury,
+                       G. Fraschetti, T. Radey, and M. Schwochert,
+                       Stardust Imaging Camera, J. Geophys. Res., 108,
+                       (E10), 8116, 2003"
+END_OBJECT          = REFERENCE
+
+OBJECT              = REFERENCE
+  REFERENCE_KEY_ID  = "ANDERSONETAL2003"
+  REFERENCE_DESC    = "Anderson, J. D., E. L. Lau, M. K. Bird, B. C.
+                       Clark, G. Giampieri, and M. Patzold, Dynamic
+                       science on the Stardust mission, J. Geophys. Res.,
+                       108, (E10), 8117, 2003"
+END_OBJECT          = REFERENCE
+
+OBJECT              = REFERENCE
+  REFERENCE_KEY_ID  = "SEKANINAETAL2003"
+  REFERENCE_DESC    = "Sekanina, Z., A model for comet 81P/Wild 2, J.
+                       Geophys. Res., 108, (E10), 8112, 2003"
+END_OBJECT          = REFERENCE
+
+END

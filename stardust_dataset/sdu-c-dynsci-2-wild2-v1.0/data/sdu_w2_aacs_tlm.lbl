@@ -1,0 +1,38 @@
+PDS_VERSION_ID               = PDS3
+
+/* File characteristic keywords */
+RECORD_TYPE                  = STREAM
+
+/* Identification data elements */
+DATA_SET_ID                  = "SDU-C-DYNSCI-2-WILD2-V1.0"
+PRODUCT_ID                   = "SDU_W2_AACS_TLM.TAB"
+PRODUCT_TYPE                 = "AACS_TELEMETRY"
+INSTRUMENT_NAME              = "DYNAMIC SCIENCE EXPERIMENT"
+INSTRUMENT_ID                = "DYNSCI"
+INSTRUMENT_HOST_NAME         = "STARDUST"
+TARGET_NAME                  = "81P/WILD 2 (1978 A2)"
+START_TIME                   = 2004-01-02T19:00:01.360
+STOP_TIME                    = 2004-01-02T19:49:59.443
+SPACECRAFT_CLOCK_START_COUNT = "0757537442.013"
+SPACECRAFT_CLOCK_STOP_COUNT  = "0757540440.035"
+PRODUCT_CREATION_TIME        = 2004-09-14T11:35:00
+
+/* Pointers to header and table objects */
+^HEADER                      = ("SDU_W2_AACS_TLM.TAB",1<BYTES>)
+^TABLE                       = ("SDU_W2_AACS_TLM.TAB",817<BYTES>)
+
+OBJECT                       = HEADER
+        HEADER_TYPE          = CSV
+        BYTES                = 816
+END_OBJECT                   = HEADER
+
+OBJECT                       = TABLE
+        NAME                 = AACS_TELEMETRY
+        INTERCHANGE_FORMAT   = ASCII
+        ^STRUCTURE           = "SDU_W2_AACS_TLM.FMT"
+        ROW_BYTES            = 204
+        ROWS                 = 17460
+        COLUMNS              = 15
+END_OBJECT                   = TABLE
+
+END

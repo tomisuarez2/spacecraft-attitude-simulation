@@ -9,11 +9,11 @@
 %       Analytical Mechanics of Space Systems,
 %       2nd Edition, AIAA, 2009.
 
-close;
-clear;
-clc;
+% Linux OS
+p = genpath("../src");
+% Windows OS
+%p = genpath("..\src");
 
-p = genpath("..\src");
 addpath(p)
 
 animation = true;

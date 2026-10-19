@@ -1,0 +1,122 @@
+PDS_VERSION_ID                  = PDS3
+LABEL_REVISION_NOTE             = "B. SEMENOV, 2004-09-17"
+
+RECORD_TYPE                     = STREAM
+
+OBJECT                          = PERSONNEL
+  PDS_USER_ID                   = JANDERSON
+
+  OBJECT                        = PERSONNEL_INFORMATION
+    FULL_NAME                   = "JOHN D. ANDERSON"
+    LAST_NAME                   = ANDERSON
+    TELEPHONE_NUMBER            = "8183543956"
+    ALTERNATE_TELEPHONE_NUMBER  = "N/A"
+    FAX_NUMBER                  = "8183546825"
+    INSTITUTION_NAME            = "JET PROPULSION LABORATORY"
+    NODE_ID                     = "N/A"
+    PDS_AFFILIATION             = "N/A"
+    PDS_ADDRESS_BOOK_FLAG       = "Y"
+    REGISTRATION_DATE           = "N/A"
+    ADDRESS_TEXT                = "JET PROPULSION LABORATORY\n
+                                   MAILSTOP 238-420\n
+                                   4800 OAK GROVE DRIVE\n
+                                   PASADENA, CA 91109\n
+                                   USA"
+  END_OBJECT                    = PERSONNEL_INFORMATION
+
+  OBJECT                        = PERSONNEL_ELECTRONIC_MAIL
+    ELECTRONIC_MAIL_ID          = "JOHN.D.ANDERSON@JPL.NASA.GOV"
+    ELECTRONIC_MAIL_TYPE        = "INTERNET"
+    PREFERENCE_ID               = 1
+  END_OBJECT                    = PERSONNEL_ELECTRONIC_MAIL
+
+END_OBJECT                      = PERSONNEL
+
+OBJECT                          = PERSONNEL
+  PDS_USER_ID                   = TDUXBURY
+
+  OBJECT                        = PERSONNEL_INFORMATION
+    FULL_NAME                   = "THOMAS C. DUXBURY"
+    LAST_NAME                   = DUXBURY
+    TELEPHONE_NUMBER            = "8183544301"
+    ALTERNATE_TELEPHONE_NUMBER  = "8183541296"
+    FAX_NUMBER                  = "8183933517"
+    INSTITUTION_NAME            = "JET PROPULSION LABORATORY"
+    NODE_ID                     = "N/A"
+    PDS_AFFILIATION             = "N/A"
+    PDS_ADDRESS_BOOK_FLAG       = "Y"
+    REGISTRATION_DATE           = "N/A"
+    ADDRESS_TEXT                = "JET PROPULSION LABORATORY\n
+                                   MAILSTOP 301-429\n
+                                   4800 OAK GROVE DRIVE\n
+                                   PASADENA, CA 91109\n
+                                   USA"
+  END_OBJECT                    = PERSONNEL_INFORMATION
+
+  OBJECT                        = PERSONNEL_ELECTRONIC_MAIL
+    ELECTRONIC_MAIL_ID          = "THOMAS.C.DUXBURY@JPL.NASA.GOV"
+    ELECTRONIC_MAIL_TYPE        = "INTERNET"
+    PREFERENCE_ID               = 1
+  END_OBJECT                    = PERSONNEL_ELECTRONIC_MAIL
+
+END_OBJECT                      = PERSONNEL
+
+OBJECT                          = PERSONNEL
+  PDS_USER_ID                   = CACTON
+
+  OBJECT                        = PERSONNEL_INFORMATION
+    FULL_NAME                   = "CHARLES H. ACTON, JR."
+    LAST_NAME                   = ACTON
+    TELEPHONE_NUMBER            = "8183543869"
+    ALTERNATE_TELEPHONE_NUMBER  = "8183543935"
+    FAX_NUMBER                  = "8183936388"
+    INSTITUTION_NAME            = "JET PROPULSION LABORATORY"
+    NODE_ID                     = "NAIF"
+    PDS_AFFILIATION             = "PDSNAIF"
+    PDS_ADDRESS_BOOK_FLAG       = "N"
+    REGISTRATION_DATE           = "N/A"
+    ADDRESS_TEXT                = "JET PROPULSION LABORATORY \n
+                                   MAILSTOP 301-125L \n
+                                   4800 OAK GROVE DRIVE \n
+                                   PASADENA, CA 91109 \n
+                                   USA"
+  END_OBJECT                    = PERSONNEL_INFORMATION
+
+  OBJECT                        = PERSONNEL_ELECTRONIC_MAIL
+    ELECTRONIC_MAIL_ID          = "CHARLES.ACTON@JPL.NASA.GOV"
+    ELECTRONIC_MAIL_TYPE        = "INTERNET"
+    PREFERENCE_ID               = 1
+  END_OBJECT                    = PERSONNEL_ELECTRONIC_MAIL
+
+END_OBJECT                      = PERSONNEL
+
+OBJECT                          = PERSONNEL
+  PDS_USER_ID                   = BSEMENOV
+
+  OBJECT                        = PERSONNEL_INFORMATION
+    FULL_NAME                   = "BORIS V. SEMENOV"
+    LAST_NAME                   = SEMENOV
+    TELEPHONE_NUMBER            = "8183548136"
+    ALTERNATE_TELEPHONE_NUMBER  = "8183543935"
+    FAX_NUMBER                  = "8183936388"
+    INSTITUTION_NAME            = "JET PROPULSION LABORATORY"
+    NODE_ID                     = "NAIF"
+    PDS_AFFILIATION             = "PDSNAIF"
+    PDS_ADDRESS_BOOK_FLAG       = "N"
+    REGISTRATION_DATE           = "N/A"
+    ADDRESS_TEXT                = "JET PROPULSION LABORATORY \n
+                                   MAILSTOP 301-125L \n
+                                   4800 OAK GROVE DRIVE \n
+                                   PASADENA, CA 91109 \n
+                                   USA"
+  END_OBJECT                    = PERSONNEL_INFORMATION
+
+  OBJECT                        = PERSONNEL_ELECTRONIC_MAIL
+    ELECTRONIC_MAIL_ID          = "BORIS.SEMENOV@JPL.NASA.GOV"
+    ELECTRONIC_MAIL_TYPE        = "INTERNET"
+    PREFERENCE_ID               = 1
+  END_OBJECT                    = PERSONNEL_ELECTRONIC_MAIL
+
+END_OBJECT                      = PERSONNEL
+
+END

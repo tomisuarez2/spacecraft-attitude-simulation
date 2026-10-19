@@ -1,0 +1,89 @@
+PDS_VERSION_ID             = PDS3
+VOLUME_ID                  = SDDS_0001
+RECORD_TYPE                = FIXED_LENGTH
+RECORD_BYTES               = 166
+FILE_RECORDS               = 2
+^INDEX_TABLE               = "INDEX.TAB"
+              
+OBJECT                     = INDEX_TABLE
+
+  INTERCHANGE_FORMAT       = ASCII
+  ROW_BYTES                = 166
+  ROWS                     = 2
+  COLUMNS                  = 8
+  INDEX_TYPE               = SINGLE
+
+  OBJECT                   = COLUMN
+    NAME                   = START_TIME
+    DATA_TYPE              = "TIME"
+    START_BYTE             = 1
+    BYTES                  = 23
+    DESCRIPTION            = "Start time of the product."
+    FORMAT                 = "A23"
+  END_OBJECT               = COLUMN
+             
+  OBJECT                   = COLUMN
+    NAME                   = STOP_TIME
+    DATA_TYPE              = "TIME"
+    START_BYTE             = 25
+    BYTES                  = 23
+    DESCRIPTION            = "Stop time of the product."
+    FORMAT                 = "A23"
+  END_OBJECT               = COLUMN
+
+  OBJECT                   = COLUMN
+    NAME                   = PATH_NAME
+    DATA_TYPE              = "CHARACTER"
+    START_BYTE             = 50
+    BYTES                  = 5
+    DESCRIPTION            = "File path."
+    FORMAT                 = "A5"
+  END_OBJECT               = COLUMN
+
+  OBJECT                   = COLUMN
+    NAME                   = FILE_NAME
+    DATA_TYPE              = "CHARACTER"
+    START_BYTE             = 58
+    BYTES                  = 19
+    DESCRIPTION            = "File name."
+    FORMAT                 = "A19"
+  END_OBJECT               = COLUMN
+
+  OBJECT                   = COLUMN
+    NAME                   = DATA_SET_ID
+    DATA_TYPE              = "CHARACTER"
+    START_BYTE             = 80
+    BYTES                  = 25
+    DESCRIPTION            = "Data set ID."
+    FORMAT                 = "A25"
+  END_OBJECT               = COLUMN
+
+  OBJECT                   = COLUMN
+    NAME                   = PRODUCT_CREATION_TIME
+    DATA_TYPE              = "TIME"
+    START_BYTE             = 107
+    BYTES                  = 19
+    DESCRIPTION            = "Product creation time."
+    FORMAT                 = "A19"
+  END_OBJECT               = COLUMN
+
+  OBJECT                   = COLUMN
+    NAME                   = PRODUCT_ID
+    DATA_TYPE              = "CHARACTER"
+    START_BYTE             = 128
+    BYTES                  = 19
+    DESCRIPTION            = "Product ID."
+    FORMAT                 = "A19"
+  END_OBJECT               = COLUMN
+
+  OBJECT                   = COLUMN
+    NAME                   = PRODUCT_TYPE
+    DATA_TYPE              = "CHARACTER"
+    START_BYTE             = 150
+    BYTES                  = 14
+    DESCRIPTION            = "Product type."
+    FORMAT                 = "A14"
+  END_OBJECT               = COLUMN
+
+END_OBJECT                 = INDEX_TABLE
+END

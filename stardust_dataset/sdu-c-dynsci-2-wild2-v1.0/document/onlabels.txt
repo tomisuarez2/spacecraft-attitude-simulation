@@ -1,0 +1,155 @@
+PDS_VERSION_ID          = PDS3
+RECORD_TYPE             = STREAM
+
+OBJECT                  = TEXT
+   INTERCHANGE_FORMAT   = ASCII
+   PUBLICATION_DATE     = 2004-09-15
+   NOTE                 = "Explanation of PDS labels for STARDUST
+                           Wild 2 Encounter Dynamic Science Experiment 
+                           data files."
+END_OBJECT              = TEXT
+
+END
+
+
+Example label for Dynamic Science Experiment Data File
+=====================================================
+
+   PDS_VERSION_ID               = PDS3
+
+   /* File characteristic keywords */
+   RECORD_TYPE                  = STREAM
+
+   /* Identification data elements */
+   DATA_SET_ID                  = "SDU-C-DYNSCI-2-WILD2-V1.0"
+   PRODUCT_ID                   = "SDU_W2_AACS_TLM.TAB"
+   PRODUCT_TYPE                 = "AACS_TELEMETRY"
+   INSTRUMENT_NAME              = "DYNAMIC SCIENCE EXPERIMENT"
+   INSTRUMENT_ID                = "DYNSCI"
+   INSTRUMENT_HOST_NAME         = "STARDUST"
+   TARGET_NAME                  = "81P/WILD 2 (1978 A2)"
+   START_TIME                   = 2004-01-02T19:00:01.360
+   STOP_TIME                    = 2004-01-02T19:49:59.443
+   SPACECRAFT_CLOCK_START_COUNT = "0757537442.013"
+   SPACECRAFT_CLOCK_STOP_COUNT  = "0757540440.035"
+   PRODUCT_CREATION_TIME        = 2004-09-14T11:35:00
+
+   /* Pointers to header and table objects */
+   ^HEADER                      = ("SDU_W2_AACS_TLM.TAB",1<BYTES>)
+   ^TABLE                       = ("SDU_W2_AACS_TLM.TAB",817<BYTES>)
+
+   OBJECT                       = HEADER
+           HEADER_TYPE          = CSV
+           BYTES                = 816
+   END_OBJECT                   = HEADER
+
+   OBJECT                       = TABLE
+           NAME                 = AACS_TELEMETRY
+           INTERCHANGE_FORMAT   = ASCII
+           ^STRUCTURE           = "SDU_W2_AACS_TLM.FMT"
+           ROW_BYTES            = 204
+           ROWS                 = 17460
+           COLUMNS              = 15
+   END_OBJECT                   = TABLE
+
+   END
+
+
+General notes regarding label
+=============================
+   
+   *  Strings appear in quotes.
+   *  Integers and PDS times do not take quotes. 
+   *  Lists are enclosed within {} type brackets. 
+   *  If a field is unknown, "UNK" may be entered. 
+   *  If a field is not applicable to this file, "N/A" can be used. 
+   *  Fields can spill freely, with or without white space, onto
+      following lines.
+
+
+Definition of Keywords/Values for Dynamic Science Experiment data labels:
+=========================================================================
+
+   PDS version identification keyword(s):
+
+      PDS_VERSION_ID                The version of the present PDS
+                                    standards document -- PDS3
+
+
+   File characteristics keyword(s):
+ 
+      RECORD_TYPE                   Record format of the file; STREAM
+                                    for all Dynamic Science Experiment
+                                    data files because they are
+                                    variable line length ASCII text
+                                    files.
+
+
+   Product identification keyword(s):   
+
+      DATA_SET_ID                   "SDU-C-DYNSCI-2-WILD2-V1.0" in all
+                                    Dynamic Science Experiment data
+                                    product labels. The fields of this
+                                    data set ID mean: 'SDU' for
+                                    Stardust spacecraft; 'C' for
+                                    mission's target comet Wild 2;
+                                    'DYNSCI' for Dynamic Science
+                                    Experiment data identifier; '2' for
+                                    the CODMAC processing level;
+                                    'WILD2' for Wild 2 encounter data
+                                    and 'V1.0' for the data set version
+                                    number.
+ 
+      PRODUCT_ID                    Actual file name. In the example,
+                                    it is "SDU_W2_AACS_TLM.TAB".
+ 
+      PRODUCT_TYPE                  Type of the product, either 
+                                    "AACS_TELEMETRY" for Attitude Control
+                                    System telemetry data or "SMALL_FORCES"
+                                    for ACS thruster firing data.
+ 
+      INSTRUMENT_NAME               "DYNAMIC SCIENCE EXPERIMENT" in 
+                                    all Dynamic Science Experiment data 
+                                    product labels.
+ 
+      INSTRUMENT_ID                 "DYNSCI" in all Dynamic Science
+                                    Experiment data product labels.
+ 
+      INSTRUMENT_HOST_NAME          "STARDUST" in all Dynamic Science
+                                    Experiment data product labels.
+ 
+      TARGET_NAME                   "81P/WILD 2 (1978 A2)" in all
+                                    Dynamic Science Experiment data
+                                    product labels.
+ 
+      START_TIME                    Data start time in PDS time format
+                                    (yyyy-mm-ddThh:mm:ss). No quotes
+                                    are needed.
+ 
+      STOP_TIME                     Data stop time in PDS time format
+                                    (yyyy-mm-ddThh:mm:ss).
+ 
+      SPACECRAFT_CLOCK_START_COUNT  Data start time as spacecraft
+                                    clock. This is treated as a string,
+                                    and is contained in quotes. Format
+                                    is "XXXXXXXXX.YYY", where XXXXXXXXX
+                                    is on-board clock integer seconds
+                                    and YYY are fractional seconds (as
+                                    count of 1/256th of a second.)
+ 
+      SPACECRAFT_CLOCK_STOP_COUNT   Data stop time as spacecraft clock
+                                    in the same format as the start
+                                    spacecraft clock.
+ 
+      PRODUCT_CREATION_TIME         Time when the file was created
+                                    given in PDS time format,
+                                    yyyy-mm-ddThh:mm:ss.
+
+ 
+   Object pointer and data object definition keywords:
+
+      Keywords in this section define the HEADER and TABLE objects and
+      point to the data location within the product. For each of the
+      objects the set of keywords defining it complies with minimum
+      identification requirements.
+

@@ -1,0 +1,43 @@
+PDS_VERSION_ID       = PDS3                                                   
+RECORD_TYPE          = STREAM                                                 
+                                                                              
+OBJECT               = TEXT                                                   
+  PUBLICATION_DATE   = 2004-09-15                                             
+  NOTE               = "PDS Catalog Objects Supporting SDDS_0001"             
+END_OBJECT           = TEXT                                                   
+                                                                              
+END                                                                           
+                                                                              
+PDS Catalog Objects Supporting SDDS_0001                                      
+========================================                                      
+                                                                              
+  The CATALOG sub-directory contains data object files that provide           
+  high-level descriptions of the Stardust mission, spacecraft, mission        
+  target, and science team, as well as of the Wild 2 Encounter Dynamic        
+  Science Experiment data set contained on this volume. The                   
+  descriptions are organized into the following catalog objects:              
+                                                                              
+  CATINFO.TXT   - The file you are now reading.                               
+                                                                              
+  STARDUST.CAT  - High-level catalog object for the Stardust mission.         
+                                                                              
+  SDU.CAT       - High-level catalog object for the Stardust spacecraft.      
+                                                                              
+  DYNSCI.CAT    - High-level catalog object for the Dynamic Science           
+                  Experiment on the Stardust spacecraft.                      
+                                                                              
+  DATASET.CAT   - High-level catalog object for the Wild 2 Encounter          
+                  Dynamic Science Experiment data set.                        
+                                                                              
+  81P_WILD_2_1978_A2.CAT                                                      
+                - Target catalog object for comet 81P/Wild 2.                 
+                                                                              
+  PERSONNEL.CAT - High-level catalog object for personnel officially          
+                  responsible for the production and distribution of the      
+                  Stardust Wild 2 Encounter Dynamic Science Experiment        
+                  Data archive.                                               
+                                                                              
+  REFERENCE.CAT - High-level catalog object containing bibliographic          
+                  citations for reference works cited in other catalog        
+                  objects.                                                    
+                                                                              

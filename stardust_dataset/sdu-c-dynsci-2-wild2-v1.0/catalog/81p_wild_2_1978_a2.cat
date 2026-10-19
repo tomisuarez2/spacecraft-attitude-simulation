@@ -1,0 +1,24 @@
+PDS_VERSION_ID      = PDS3
+LABEL_REVISION_NOTE = "
+  24 Feb 2003   A.C.Raugh,   Creation
+  "
+
+OBJECT     = TARGET
+  TARGET_NAME = "81P/WILD 2 (1978 A2)"
+
+  OBJECT     = TARGET_INFORMATION
+    TARGET_TYPE        = "COMET"
+    PRIMARY_BODY_NAME  = "SUN"
+    ORBIT_DIRECTION    = "PROGRADE"
+    ROTATION_DIRECTION = "UNK"
+    TARGET_DESC        = "
+      A short-period comet.
+
+      First observed in 1978. Also known as:
+                  1978b     1978 XI
+        1983 S1   1983s     1984 XIV
+                  1989t     1990 XXVIII
+      "
+  END_OBJECT = TARGET_INFORMATION
+END_OBJECT = TARGET
+END

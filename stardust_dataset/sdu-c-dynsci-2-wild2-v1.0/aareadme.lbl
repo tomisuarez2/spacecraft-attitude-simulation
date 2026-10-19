@@ -1,0 +1,15 @@
+PDS_VERSION_ID                = PDS3
+
+RECORD_TYPE                   = STREAM
+
+^TEXT                         = "AAREADME.TXT"
+
+OBJECT                        = TEXT
+  PUBLICATION_DATE            = 2004-09-15
+  NOTE                        = "Stardust Wild 2 Encounter Dynamic Science 
+                                 Experiment Data Volume Contents Description 
+                                 (AAREADME.TXT)"
+END_OBJECT                    = TEXT
+
+END
+
