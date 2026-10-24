@@ -60,7 +60,7 @@ function [tOut, yOut] = rkf45Integrator(func, tSpan, y0, stateFunc, tolerance)
         func      (1,1) function_handle
         tSpan     (1,2) double {mustBeFinite}
         y0        (:,1) double {mustBeFinite}
-        stateFunc  (1,1) function_handle = @(y) y;
+        stateFunc (1,1) function_handle = @(y) y;
         tolerance (1,1) double {mustBeFinite,mustBePositive} = 1e-8
     end
     
@@ -130,7 +130,7 @@ function [tOut, yOut] = rkf45Integrator(func, tSpan, y0, stateFunc, tolerance)
             tOut(k) = t;
             yOut(:,k) = y;
         end
-
+     
         % Update the time step:
         h = min(delta*h, 4*h);
         if h < hMin
@@ -138,5 +138,5 @@ function [tOut, yOut] = rkf45Integrator(func, tSpan, y0, stateFunc, tolerance)
                      ' allowable value (%g) at time %g.\n\n'], hMin, t)
             return
         end
-    end    
+    end
 end

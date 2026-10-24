@@ -36,12 +36,6 @@ att = readtable("../stardust_dataset/attitude.csv");
 % Windows OS
 %att = readtable("..\stardust_dataset\attitude.csv");
 
-if ~isdatetime(att.UTC_TIME)
-    att.UTC_TIME = datetime(string(att.UTC_TIME), ...
-        'InputFormat', "yyyy-MM-dd'T'HH:mm:ss.SSSSSS", ...
-        'TimeZone', 'UTC');
-end
-
 % Data Inspection
 disp(head(att));
 
@@ -58,8 +52,6 @@ tAtt = seconds(att.UTC_TIME' - att.UTC_TIME(1));
 [tAtt, uniqIdcs] = unique(tAtt);
 
 %% Angular velocity evolution
-
-colors = lines(4);
 
 % [rad/s]
 wObs = [att.ATT_RAT_BF_X'; att.ATT_RAT_BF_Y'; att.ATT_RAT_BF_Z'];
